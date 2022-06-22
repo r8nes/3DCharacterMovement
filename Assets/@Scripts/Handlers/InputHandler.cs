@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ActionCatGame.Handler.Input
+namespace ActionCatGame.Handler
 {
     public class InputHandler : MonoBehaviour
     {
