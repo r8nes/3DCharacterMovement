@@ -28,8 +28,8 @@ namespace ActionCatGame.Handler
             _cameraHandler = CameraHandler.Instance;
         }
 
-        //maybe use FixedUpdate
-        private void LateUpdate()
+        //not smoothed!
+        private void FixedUpdate()
         {
             float delta = Time.deltaTime;
 

@@ -59,6 +59,7 @@ namespace ActionCatGame.Movement
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(_moveDirection, _normalVector);
             _rigidBody.velocity = projectedVelocity;
+            _moveDirection.y = _rigidBody.velocity.y;
 
             _animatorHandler.UpdateAnimatorValues(_inputHandler.MoveAmoint, 0);
 
