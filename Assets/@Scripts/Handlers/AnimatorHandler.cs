@@ -10,9 +10,9 @@ namespace ActionCatGame.Handler
         private int _horizontal;
 
         [SerializeField] private bool _canRotate;
-        
+
         [SerializeField] Animator _animator;
-      
+
         public bool CanRotation { get => _canRotate; set => _canRotate = value; }
 
         public void Init()
@@ -59,12 +59,12 @@ namespace ActionCatGame.Handler
             _animator.SetFloat(_horizontal, h, 0.1f, Time.deltaTime);
         }
 
-        public void CanRotate() 
+        public void CanRotate()
         {
             CanRotation = true;
         }
 
-        public void StopRotation() 
+        public void StopRotation()
         {
             CanRotation = false;
         }

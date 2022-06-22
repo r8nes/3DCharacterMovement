@@ -52,6 +52,7 @@ namespace ActionCatGame.Movement
             _moveDirection = _cameraObject.forward * _inputHandler.Vertical;
             _moveDirection += _cameraObject.right * _inputHandler.Horizontal;
             _moveDirection.Normalize();
+            _moveDirection.y = 0;
 
             float speed = _movementSpeed;
             _moveDirection *= speed;
@@ -67,7 +68,7 @@ namespace ActionCatGame.Movement
             }
         }
 
-        private void HandleRotation(float delta) 
+        private void HandleRotation(float delta)
         {
             Vector3 targetDir = Vector3.zero;
             float moveOverride = _inputHandler.MoveAmoint;
