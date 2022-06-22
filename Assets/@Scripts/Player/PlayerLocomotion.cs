@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ActionCatGame.Handler.Input;
+using ActionCatGame.Handler;
 
 namespace ActionCatGame.Movement
 {
@@ -13,6 +13,8 @@ namespace ActionCatGame.Movement
 
         [HideInInspector]
         public Transform _characterTransform;
+        [HideInInspector]
+        public AnimatorHandler _animatorHandler;
 
         //maybe add 'new'?
         private Rigidbody _rigidBody;
@@ -33,8 +35,12 @@ namespace ActionCatGame.Movement
         {
             _rigidBody = GetComponent<Rigidbody>();
             _inputHandler = GetComponent<InputHandler>();
+            _animatorHandler = GetComponentInChildren<AnimatorHandler>();
+
             _cameraObject = Camera.main.transform;
             _characterTransform = transform;
+
+            _animatorHandler.Init();
         }
 
         private void Update()
@@ -52,6 +58,13 @@ namespace ActionCatGame.Movement
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(_moveDirection, _normalVector);
             _rigidBody.velocity = projectedVelocity;
+
+            _animatorHandler.UpdateAnimatorValues(_inputHandler.MoveAmoint, 0);
+
+            if (_animatorHandler.CanRotation)
+            {
+                HandleRotation(delta);
+            }
         }
 
         private void HandleRotation(float delta) 
