@@ -13,12 +13,48 @@ namespace ActionCatGame.Handler
         [SerializeField] private float _mouseY;
 
         private PlayerControls _inputActions;
+        private CameraHandler _cameraHandler;
+
         private Vector2 _movementInput;
         private Vector2 _cameraInput;
+
 
         public float MoveAmoint { get => _moveAmoint; set => _moveAmoint = value; }
         public float Vertical { get => _vertical; set => _vertical = value; }
         public float Horizontal { get => _horizontal; set => _horizontal = value; }
+
+        private void Start()
+        {
+            _cameraHandler = CameraHandler.Instance;
+        }
+
+        //not smoothed!
+        private void FixedUpdate()
+        {
+            float delta = Time.deltaTime;
+
+            if (_cameraHandler!= null)
+            {
+                _cameraHandler.FollowTarget(delta);
+                _cameraHandler.HandleCameraRotation(delta, _mouseX, _mouseY);
+            }
+        }
+
+        public void TickInput(float delta)
+        {
+            MoveInput(delta);
+        }
+
+        private void MoveInput(float delta)
+        {
+            Horizontal = _movementInput.x;
+            Vertical = _movementInput.y;
+
+            MoveAmoint = Mathf.Clamp01(Mathf.Abs(Horizontal) + Mathf.Abs(Vertical));
+
+            _mouseX = _cameraInput.x;
+            _mouseY = _cameraInput.y;
+        }
 
         private void OnEnable()
         {
@@ -35,22 +71,6 @@ namespace ActionCatGame.Handler
         private void OnDisable()
         {
             _inputActions.Disable();
-        }
-
-        public void TickInput(float delta) 
-        {
-            MoveInput(delta);
-        }
-
-        private void MoveInput(float delta) 
-        {
-            Horizontal = _movementInput.x;
-            Vertical = _movementInput.y;
-
-            MoveAmoint = Mathf.Clamp01(Mathf.Abs(Horizontal) + Mathf.Abs(Vertical));
-            
-            _mouseX = _cameraInput.x;
-            _mouseY = _cameraInput.y;
         }
     }
 }
