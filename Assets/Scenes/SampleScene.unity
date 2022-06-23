@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: b47d66c0e8eaf5a41a5112b5898c9dea, type: 2}
     - target: {fileID: 9505156, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
@@ -820,7 +820,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-92602
+  m_Name: pb_Mesh18332
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -984,7 +984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-94586
+  m_Name: pb_Mesh18422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1148,7 +1148,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-93566
+  m_Name: pb_Mesh18434
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1418,6 +1418,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canRotate: 1
   _animator: {fileID: 870268844}
+  _inputHandler: {fileID: 0}
+  _playerLocomotion: {fileID: 0}
 --- !u!95 &870268844 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9505156, guid: 679ff741e12a7e740819ede24a7000b7, type: 3}
@@ -1505,7 +1507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.116908126, y: -0, z: -0, w: 0.9931427}
-  m_LocalPosition: {x: 0, y: 1.8, z: -2.78}
+  m_LocalPosition: {x: 0, y: 1.998, z: -3.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1097282091}
@@ -1713,7 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ba2f278d75638c45bf18fdaa7f15513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lookSpeed: 0.008
+  _lookSpeed: 0.0035
   _followSpeed: 0.1
   _pivotSpeed: 0.003
   _minimumPivot: -35
@@ -1722,8 +1724,8 @@ MonoBehaviour:
   _cameraTransform: {fileID: 963194228}
   _cameraPivotTransform: {fileID: 1097282091}
   _isCursorVisible: 0
-  _cameraSphereRadius: 0.5
-  _cameraCollisionOffset: 0.5
+  _cameraSphereRadius: 0.2
+  _cameraCollisionOffset: 0.2
   _minCollisionOffset: 0.2
 --- !u!43 &1780034926
 Mesh:
@@ -1731,7 +1733,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-90940
+  m_Name: pb_Mesh18344
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1902,6 +1904,7 @@ GameObject:
   - component: {fileID: 1823732927}
   - component: {fileID: 1823732926}
   - component: {fileID: 1823732925}
+  - component: {fileID: 1823732930}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -1926,6 +1929,9 @@ MonoBehaviour:
   _moveAmoint: 0
   _mouseX: 0
   _mouseY: 0
+  _b_input: 0
+  _rollFlag: 0
+  _isInteracting: 0
 --- !u!114 &1823732926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1940,6 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterTransform: {fileID: 0}
   _animatorHandler: {fileID: 0}
+  RigidBody: {fileID: 0}
   _movementSpeed: 5
   _rotationSpeed: 12
 --- !u!54 &1823732927
@@ -1987,6 +1994,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1823732930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823732924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ea2eb554788ed4b89f77095ae6dc9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841125737
 GameObject:
   m_ObjectHideFlags: 0

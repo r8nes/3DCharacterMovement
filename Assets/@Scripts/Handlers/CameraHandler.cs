@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ActionCatGame.Handler
@@ -77,14 +75,18 @@ namespace ActionCatGame.Handler
             //smooth rotation of camera
 
             Quaternion targetRotation = Quaternion.Euler(rotation);
-            //_refTransform.rotation = targetRotation;
-            _refTransform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _lookSpeed * Time.deltaTime);
+           
+            _refTransform.rotation = targetRotation;
+            
+            //_refTransform.rotation = Quaternion.Slerp(_refTransform.rotation, targetRotation, _lookSpeed * Time.deltaTime);
 
             rotation = Vector3.zero;
             rotation.x = _pivotAngles;
 
             targetRotation = Quaternion.Euler(rotation);
-            //_cameraPivotTransform.localRotation = targetRotation;
+            
+           // _cameraPivotTransform.localRotation = targetRotation;
+            
             _cameraPivotTransform.localRotation = Quaternion.Slerp(_cameraPivotTransform.localRotation, targetRotation, _lookSpeed * Time.deltaTime);
         }
 

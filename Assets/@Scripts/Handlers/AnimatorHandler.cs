@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using ActionCatGame.Movement;
 using UnityEngine;
 
 namespace ActionCatGame.Handler
@@ -10,14 +9,18 @@ namespace ActionCatGame.Handler
         private int _horizontal;
 
         [SerializeField] private bool _canRotate;
-
-        [SerializeField] Animator _animator;
+        [SerializeField] private Animator _animator;
+        [SerializeField] private InputHandler _inputHandler;
+        [SerializeField] private PlayerLocomotion _playerLocomotion;
 
         public bool CanRotation { get => _canRotate; set => _canRotate = value; }
-
+        public Animator Animator { get => _animator; set => _animator = value; }
+       
         public void Init()
         {
-            _animator = GetComponent<Animator>();
+            Animator = GetComponent<Animator>();
+            _inputHandler = GetComponentInParent<InputHandler>();
+            _playerLocomotion = GetComponentInParent<PlayerLocomotion>();
 
             _vertical = Animator.StringToHash("Vertical");
             _horizontal = Animator.StringToHash("Horizontal");
@@ -55,8 +58,15 @@ namespace ActionCatGame.Handler
                 h = 0;
             #endregion
 
-            _animator.SetFloat(_vertical, v, 0.1f, Time.deltaTime);
-            _animator.SetFloat(_horizontal, h, 0.1f, Time.deltaTime);
+            Animator.SetFloat(_vertical, v, 0.1f, Time.deltaTime);
+            Animator.SetFloat(_horizontal, h, 0.1f, Time.deltaTime);
+        }
+
+        public void PlayTargetAnimation(string targetAnim, bool isInteracting) 
+        {
+            Animator.applyRootMotion = isInteracting;
+            Animator.SetBool("isInteracting", isInteracting);
+            Animator.CrossFade(targetAnim, 0.2f);
         }
 
         public void CanRotate()
@@ -67,6 +77,19 @@ namespace ActionCatGame.Handler
         public void StopRotation()
         {
             CanRotation = false;
+        }
+
+        private void OnAnimatorMove()
+        {
+            if (_inputHandler.IsInteracting == false)
+                return;
+
+            float delta = Time.deltaTime;
+            _playerLocomotion.RigidBody.drag = 0;
+            Vector3 deltaPosition = _animator.deltaPosition;
+            deltaPosition.y = 0;
+            Vector3 velocity = deltaPosition / delta;
+            _playerLocomotion.RigidBody.velocity = velocity;
         }
     }
 }
