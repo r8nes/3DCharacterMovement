@@ -73,7 +73,7 @@ namespace ActionCatGame.Handler
 
         private void HandleRollInput(float delta) 
         {
-            _b_input = _inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Performed;
+         //   _b_input = _inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Performed;
          
             if (_b_input)
             {
@@ -86,8 +86,8 @@ namespace ActionCatGame.Handler
             if (_inputActions == null)
             {
                 _inputActions = new PlayerControls();
-                _inputActions.PlayerMovement.Movement.performed += _inputActions => _movementInput = _inputActions.ReadValue<Vector2>();
-                _inputActions.PlayerMovement.Camera.performed += i => _cameraInput = i.ReadValue<Vector2>();
+              //  _inputActions.PlayerMovement.Movement.performed += _inputActions => _movementInput = _inputActions.ReadValue<Vector2>();
+             //   _inputActions.PlayerMovement.Camera.performed += i => _cameraInput = i.ReadValue<Vector2>();
             }
 
             _inputActions.Enable();
