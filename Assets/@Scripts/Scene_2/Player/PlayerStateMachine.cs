@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ActionCatGame.Prototype.Combat;
 using UnityEngine;
 
 namespace ActionCatGame.Prototype.State
@@ -9,6 +10,7 @@ namespace ActionCatGame.Prototype.State
         [field: SerializeField] public InputReader Input { get; private set; }
         [field: SerializeField] public CharacterController CharacterController { get; private set; }
         [field: SerializeField] public Animator Animator { get; private set; }
+        [field: SerializeField] public Targeter Targeter { get; private set; }
         [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
         [field: SerializeField] public float RotationDamping { get; private set; }
 
