@@ -25,7 +25,7 @@ namespace ActionCatGame.Prototype.State
         {
             Vector3 movement = CalculateMovement();
 
-            _playerState.CharacterController.Move(_playerState.FreeLookMovementSpeed * delta * movement);
+            Move(_playerState.FreeLookMovementSpeed * movement, delta);
 
             if (_playerState.Input.MovementValue == Vector2.zero)
             {
