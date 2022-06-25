@@ -8,6 +8,8 @@ namespace ActionCatGame
 {
     public class InputReader : MonoBehaviour, PlayerControls.IPlayerActions
     {
+        public bool IsAttacking { get; private set; }
+
         private PlayerControls _controls;
 
         public event Action JumpEvent;
@@ -62,6 +64,18 @@ namespace ActionCatGame
             if (!context.performed) return;
 
             CancelEvent?.Invoke();
+        }
+
+        public void OnAttack(InputAction.CallbackContext context)
+        {
+            if (!context.performed)
+            {
+                IsAttacking = true;
+            }
+            else if (context.canceled)
+            {
+                IsAttacking = false;
+            }
         }
     }
 }

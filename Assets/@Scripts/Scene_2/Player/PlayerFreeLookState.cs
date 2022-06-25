@@ -23,6 +23,12 @@ namespace ActionCatGame.Prototype.State
 
         public override void Tick(float delta)
         {
+            if (_playerState.Input.IsAttacking)
+            {
+                _playerState.SwitchState(new PlayerAttackingState(_playerState, 0));
+                return;
+            }
+
             Vector3 movement = CalculateMovement();
 
             Move(_playerState.FreeLookMovementSpeed * movement, delta);
