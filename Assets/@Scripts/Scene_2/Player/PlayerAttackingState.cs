@@ -22,7 +22,7 @@ namespace ActionCatGame.Prototype.Player
 
         public override void Enter()
         {
-            _playerState.Damage.SetAttack(_attack.Damage, _attack.KnockBack);
+            _playerState.Damage.SetAttack(_attack.Damage, _attack.KnockBack, _attack.Blow);
             _playerState.Animator.CrossFadeInFixedTime(_attack.AnimationName, _attack.TransitionDuration);
         }
 
@@ -86,7 +86,7 @@ namespace ActionCatGame.Prototype.Player
         {
             if (_alreadyAppliedForce) return;
 
-            _playerState.ForceReceiver.AddForce(_playerState.transform.forward * _attack.Force);
+            _playerState.ForceReceiver.AddForce(_playerState.transform.forward * _attack.Force, _attack.Blow);
 
             _alreadyAppliedForce = true;
         }

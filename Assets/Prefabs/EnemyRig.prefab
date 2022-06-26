@@ -77,8 +77,8 @@ MonoBehaviour:
   <Target>k__BackingField: {fileID: 1854816426659198446}
   <Ragdoll>k__BackingField: {fileID: 4039413386447571365}
   <AttackDamage>k__BackingField: 10
-  <Knockback>k__BackingField: 5
-  <MovementSpeed>k__BackingField: 5
+  <Knockback>k__BackingField: 10
+  <MovementSpeed>k__BackingField: 4
   <PlayerChasingRange>k__BackingField: 7
   <AttackRange>k__BackingField: 1
 --- !u!114 &1854816426659198446

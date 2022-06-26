@@ -25,6 +25,8 @@ namespace ActionCatGame.Prototype.State
 
         protected bool IsInChaseRange() 
         {
+            if (_enemyState.Player.IsDead) return false;
+
             float playerDistance =(_enemyState.Player.transform.position - _enemyState.transform.position).sqrMagnitude;
 
             // возмонжо подправить через Mathf.Pow

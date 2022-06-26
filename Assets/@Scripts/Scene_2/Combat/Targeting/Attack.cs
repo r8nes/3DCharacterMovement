@@ -16,5 +16,6 @@ namespace ActionCatGame.Prototype.Combat
         [field: SerializeField] public float Force { get; private set; } = -1;
         [field: SerializeField] public float KnockBack { get; private set; }
         [field: SerializeField] public int Damage { get; private set; }
+        [field: SerializeField] public bool Blow { get; private set; }
     }
 }

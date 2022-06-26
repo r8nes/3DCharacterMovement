@@ -41,7 +41,7 @@ namespace ActionCatGame.Prototype.Props
             }
         }
 
-        public void AddForce(Vector3 force)
+        public void AddForce(Vector3 force, bool blow)
         {
             _impact += force;
 

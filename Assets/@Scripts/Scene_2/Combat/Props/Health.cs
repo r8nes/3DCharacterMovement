@@ -8,11 +8,13 @@ namespace ActionCatGame.Prototype.Stats
     public class Health : MonoBehaviour
     {
         private float _health;
+        private bool _isInvunerable=false;
+        [SerializeField] private float _maxHealth = 100f;
 
         public event Action OnTakeDamage; 
         public event Action OnDie;
 
-        [SerializeField] private float _maxHealth = 100f;
+        public bool IsDead => _health == 0;
         
         void Start()
         {
@@ -23,6 +25,8 @@ namespace ActionCatGame.Prototype.Stats
         {
             if (_health <= 0) return;
 
+            if (_isInvunerable) return;
+            
             _health = Mathf.Max(_health - damage, 0);
 
             OnTakeDamage?.Invoke();
@@ -31,6 +35,11 @@ namespace ActionCatGame.Prototype.Stats
             {
                 OnDie?.Invoke();
             }
+        }
+
+        public void SetInvulnerable(bool isInvunerable) 
+        {
+            _isInvunerable = isInvunerable;
         }
     }
 }

@@ -65,6 +65,8 @@ namespace ActionCatGame.Prototype.Enemy
 
         private bool IsInAttackRange()
         {
+            if (_enemyState.Player.IsDead) return false;
+            
             float playerDistanceSqr = (_enemyState.Player.transform.position - _enemyState.transform.position).sqrMagnitude;
 
             // ьс Mathf.Pow

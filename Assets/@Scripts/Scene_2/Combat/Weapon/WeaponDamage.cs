@@ -10,6 +10,7 @@ namespace ActionCatGame.Prototype.Weapon
     {
         private int _damage;
         private float _knockback;
+        private bool _blow;
 
         [SerializeField] private Collider _collider;
 
@@ -36,14 +37,15 @@ namespace ActionCatGame.Prototype.Weapon
             if (other.TryGetComponent(out ForceReceiver force))
             {
                 Vector3 dir = (other.transform.position - _collider.transform.position).normalized; 
-                force.AddForce(dir*_knockback);
+                force.AddForce(dir*_knockback, _blow);
             }
         }
 
-        public void SetAttack(int damage, float knockback) 
+        public void SetAttack(int damage, float knockback, bool blow = false) 
         {
             _damage = damage;
             _knockback = knockback;
+            _blow = blow;
         }
     }
 }

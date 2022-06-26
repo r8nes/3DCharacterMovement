@@ -28,6 +28,12 @@ namespace ActionCatGame.Prototype.Player
                 return;
             }
 
+            if (_playerState.Input.IsBlocking)
+            {
+                _playerState.SwitchState(new PlayerBlockingState(_playerState));
+                return;
+            }
+
             if (_playerState.Targeter.CurrentTarget == null)
             {
                 _playerState.SwitchState(new PlayerFreeLookState(_playerState));

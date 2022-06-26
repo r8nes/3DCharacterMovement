@@ -28,6 +28,8 @@ namespace ActionCatGame
             {
                 _enemyState.SwitchState(new EnemyChasingState(_enemyState));
             }
+
+            FacePlayer();
         }
 
         public override void Exit()

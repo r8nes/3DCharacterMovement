@@ -9,6 +9,7 @@ namespace ActionCatGame
     public class InputReader : MonoBehaviour, PlayerControls.IPlayerActions
     {
         public bool IsAttacking { get; private set; }
+        public bool IsBlocking { get; private set; }
 
         private PlayerControls _controls;
 
@@ -16,6 +17,7 @@ namespace ActionCatGame
         public event Action DodgeEvent;
         public event Action TargetEvent;
         public event Action CancelEvent;
+        public event Action BlockEvent;
         public Vector2 MovementValue { get; private set; }
 
         private void Start()
@@ -75,6 +77,18 @@ namespace ActionCatGame
             else if (context.canceled)
             {
                 IsAttacking = false;
+            }
+        }
+
+        public void OnBlock(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                IsBlocking = true;
+            }
+            else if (context.canceled)
+            {
+                IsBlocking = false;
             }
         }
     }
