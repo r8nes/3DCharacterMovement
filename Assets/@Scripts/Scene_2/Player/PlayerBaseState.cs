@@ -1,7 +1,8 @@
 using UnityEngine;
+using ActionCatGame.Prototype.State;
+using ActionCatGame.Prototype.Player;
 
-namespace ActionCatGame.Prototype.State
-{
+namespace ActionCatGame.Prototype.State { 
     public abstract class PlayerBaseState : State
     {
         protected private PlayerStateMachine _playerState;

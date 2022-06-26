@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using ActionCatGame.Prototype.Combat;
+using ActionCatGame.Prototype.State;
 using UnityEngine;
 
-namespace ActionCatGame.Prototype.State
+namespace ActionCatGame.Prototype.Player
 {
     public class PlayerAttackingState : PlayerBaseState
     {
