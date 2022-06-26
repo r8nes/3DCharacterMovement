@@ -12,5 +12,8 @@ namespace ActionCatGame.Prototype.Combat
         [field: SerializeField] public float TransitionDuration { get; private set; }
         [field: SerializeField] public float ComboAttackTime { get; private set; }
         [field: SerializeField] public int CombatStateIndex { get; private set; } = -1;
+        [field: SerializeField] public float ForceTime { get; private set; } = -1;
+        [field: SerializeField] public float Force { get; private set; } = -1;
+        [field: SerializeField] public int Damage { get; private set; }
     }
 }

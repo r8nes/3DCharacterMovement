@@ -10,12 +10,13 @@ namespace ActionCatGame.Prototype.State
         private readonly int TARGETING_FORWARD_HASH = Animator.StringToHash("ForwardSpeed");
         private readonly int TARGETING_RIGHT_HASH = Animator.StringToHash("RightSpeed");
 
+        private const float CROSS_FADE_DURATION = 0.1f;
         public PlayerTargetingState(PlayerStateMachine playerState) : base(playerState) {}
 
         public override void Enter()
         {
             _playerState.Input.CancelEvent += OnCancel;
-            _playerState.Animator.Play(TARGETING_BLEND_TREE_HASH);
+            _playerState.Animator.CrossFadeInFixedTime(TARGETING_BLEND_TREE_HASH, CROSS_FADE_DURATION);
         }
 
         public override void Tick(float delta)

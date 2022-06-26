@@ -11,6 +11,11 @@ namespace ActionCatGame.Prototype.State
             _playerState = playerState;
         }
 
+        protected void Move(float delta) 
+        {
+            Move(Vector3.zero, delta);
+        }
+
         protected void Move(Vector3 motion, float delta) 
         {
             _playerState.CharacterController.Move((motion + _playerState.ForceReceiver.Movement) * delta);

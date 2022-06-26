@@ -68,7 +68,7 @@ namespace ActionCatGame
 
         public void OnAttack(InputAction.CallbackContext context)
         {
-            if (!context.performed)
+            if (context.performed)
             {
                 IsAttacking = true;
             }

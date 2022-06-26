@@ -12,13 +12,15 @@ namespace ActionCatGame.Prototype.State
         private readonly int FREE_LOOK_BLEND_HASH = Animator.StringToHash("FreeLookBlendTree");
 
         private const float ANIMATOR_DAMP_TIME = 0.15f;
+        
+        private const float CROSS_FADE_DURATION = 0.1f;
 
         public PlayerFreeLookState(PlayerStateMachine playerState) : base(playerState) {}
 
         public override void Enter()
         {
             _playerState.Input.TargetEvent += OnTarget;
-            _playerState.Animator.Play(FREE_LOOK_BLEND_HASH);
+            _playerState.Animator.CrossFadeInFixedTime(FREE_LOOK_BLEND_HASH, CROSS_FADE_DURATION);
         }
 
         public override void Tick(float delta)
