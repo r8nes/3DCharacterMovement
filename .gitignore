@@ -96,3 +96,576 @@ crashlytics-build.properties
 .collabignore
 
 
+Assets/Asset Packs/SDF_BasicTrainingStage.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Mesh.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Prefabs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_Grid_MAT 1.mat
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_Grid_MAT 1.mat.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_Grid_MAT.mat
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_Grid_MAT.mat.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_GridGlow_MAT 1.mat
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_GridGlow_MAT 1.mat.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_GridGlow_MAT.mat
+Assets/Asset Packs/SDF_BasicTrainingStage/Materials/Environments/TrainingStage/TrainSta_GridGlow_MAT.mat.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Mesh/Environment.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Mesh/Environment/TrainingStage.fbx
+Assets/Asset Packs/SDF_BasicTrainingStage/Mesh/Environment/TrainingStage.fbx.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Gizmos.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/PostProcessResources.asset
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/PostProcessResources.asset.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Attributes.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/BaseEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/BaseEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/EffectListEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/EffectListEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessDebugEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessDebugEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessEffectBaseEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessEffectBaseEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessEffectEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessEffectEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessLayerEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessLayerEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessProfileEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessProfileEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessVolumeEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/PostProcessVolumeEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Unity.Postprocessing.Editor.asmdef
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Unity.Postprocessing.Editor.asmdef.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Attributes/DecoratorAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Attributes/DecoratorAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Attributes/PostProcessEditorAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Attributes/PostProcessEditorAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/AttributeDecorator.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/AttributeDecorator.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/Decorators.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/Decorators.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/TrackballDecorator.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Decorators/TrackballDecorator.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/AmbientOcclusionEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/AmbientOcclusionEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/AutoExposureEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/AutoExposureEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/BloomEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/BloomEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ChromaticAberrationEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ChromaticAberrationEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ColorGradingEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ColorGradingEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/DefaultPostProcessEffectEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/DefaultPostProcessEffectEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/DepthOfFieldEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/DepthOfFieldEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/LensDistortionEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/LensDistortionEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ScreenSpaceReflectionsEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/ScreenSpaceReflectionsEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/VignetteEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Effects/VignetteEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/CubeLutAssetFactory.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/CubeLutAssetFactory.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/CubeLutAssetImporter.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/CubeLutAssetImporter.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/DefineSetter.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/DefineSetter.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/ProfileFactory.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/ProfileFactory.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/ResourceAssetFactory.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/ResourceAssetFactory.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/VolumeFactory.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Tools/VolumeFactory.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/CurveEditor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/CurveEditor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/EditorUtilities.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/EditorUtilities.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/GlobalSettings.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/GlobalSettings.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/PostProcessShaderIncludePath.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/PostProcessShaderIncludePath.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/SerializedParameterOverride.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/SerializedParameterOverride.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/Styling.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Editor/Utils/Styling.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Gizmos/PostProcessLayer.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Gizmos/PostProcessLayer.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/ParameterOverride.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/ParameterOverride.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessBundle.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessBundle.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessDebug.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessDebug.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessDebugLayer.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessDebugLayer.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEffectRenderer.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEffectRenderer.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEffectSettings.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEffectSettings.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEvent.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessEvent.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessLayer.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessLayer.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessManager.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessManager.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessProfile.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessProfile.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessRenderContext.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessRenderContext.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessResources.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessResources.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessVolume.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/PostProcessVolume.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Unity.Postprocessing.Runtime.asmdef
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Unity.Postprocessing.Runtime.asmdef.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/DisplayNameAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/DisplayNameAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MaxAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MaxAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MinAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MinAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MinMaxAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/MinMaxAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/PostProcessAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/PostProcessAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/TrackballAttribute.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Attributes/TrackballAttribute.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/AmbientOcclusion.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/AmbientOcclusion.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/AutoExposure.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/AutoExposure.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Bloom.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Bloom.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ChromaticAberration.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ChromaticAberration.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ColorGrading.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ColorGrading.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/DepthOfField.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/DepthOfField.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Dithering.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Dithering.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/FastApproximateAntialiasing.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/FastApproximateAntialiasing.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Fog.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Fog.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Grain.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Grain.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/LensDistortion.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/LensDistortion.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/MotionBlur.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/MotionBlur.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/MultiScaleVO.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/MultiScaleVO.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ScalableAO.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ScalableAO.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ScreenSpaceReflections.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/ScreenSpaceReflections.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/SubpixelMorphologicalAntialiasing.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/SubpixelMorphologicalAntialiasing.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/TemporalAntialiasing.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/TemporalAntialiasing.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Vignette.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Effects/Vignette.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/HistogramMonitor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/HistogramMonitor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/LightMeterMonitor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/LightMeterMonitor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/Monitor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/Monitor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/VectorscopeMonitor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/VectorscopeMonitor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/WaveformMonitor.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Monitors/WaveformMonitor.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/ColorUtilities.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/ColorUtilities.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/HableCurve.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/HableCurve.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/HaltonSeq.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/HaltonSeq.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/LogHistogram.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/LogHistogram.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/MeshUtilities.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/MeshUtilities.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/PropertySheet.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/PropertySheet.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/PropertySheetFactory.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/PropertySheetFactory.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/RuntimeUtilities.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/RuntimeUtilities.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/ShaderIDs.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/ShaderIDs.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/Spline.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/Spline.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TargetPool.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TargetPool.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TextureFormatUtilities.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TextureFormatUtilities.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TextureLerper.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/TextureLerper.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/XRSettings.cs
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Runtime/Utils/XRSettings.cs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/ACES.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/ACES.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Colors.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Colors.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Sampling.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Sampling.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/StdLib.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/StdLib.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/xRLib.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/xRLib.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D11.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D11.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D12.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D12.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D9.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/D3D9.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Metal.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Metal.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/OpenGL.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/OpenGL.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/PSP2.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/PSP2.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/PSSL.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/PSSL.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Switch.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Switch.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Vulkan.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/Vulkan.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/XboxOne.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/API/XboxOne.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/AutoExposure.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/AutoExposure.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Bloom.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Bloom.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Copy.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Copy.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStd.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStd.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStdFromDoubleWide.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStdFromDoubleWide.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStdFromTexArray.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/CopyStdFromTexArray.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DeferredFog.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DeferredFog.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DepthOfField.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DepthOfField.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DepthOfField.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DepthOfField.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DiscardAlpha.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DiscardAlpha.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DiskKernels.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/DiskKernels.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Distortion.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Distortion.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Dithering.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Dithering.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ExposureHistogram.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ExposureHistogram.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ExposureHistogram.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ExposureHistogram.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/FastApproximateAntialiasing.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/FastApproximateAntialiasing.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/FinalPass.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/FinalPass.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Fog.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Fog.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/GaussianDownsample.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/GaussianDownsample.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/GrainBaker.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/GrainBaker.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Lut2DBaker.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Lut2DBaker.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Lut3DBaker.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Lut3DBaker.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MotionBlur.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MotionBlur.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVO.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVO.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVODownsample1.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVODownsample2.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVODownsample2.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVORender.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVORender.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVOUpsample.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/MultiScaleVOUpsample.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScalableAO.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScalableAO.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScalableAO.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScalableAO.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScreenSpaceReflections.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScreenSpaceReflections.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScreenSpaceReflections.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/ScreenSpaceReflections.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasingBridge.hlsl
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasingBridge.hlsl.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/TemporalAntialiasing.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/TemporalAntialiasing.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Texture2DLerp.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Texture2DLerp.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Texture3DLerp.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Texture3DLerp.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Uber.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Builtins/Uber.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Histogram.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Histogram.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Histogram.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Histogram.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/LightMeter.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/LightMeter.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Overlays.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Overlays.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Vectorscope.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Vectorscope.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Vectorscope.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Vectorscope.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Waveform.compute
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Waveform.compute.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Waveform.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Debug/Waveform.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/ConvertToLog.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/ConvertToLog.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/CurveGrid.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/CurveGrid.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/Trackball.shader
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Shaders/Editor/Trackball.shader.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/LUTs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/SMAA.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_0.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_0.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_1.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_1.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_2.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_2.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_3.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_3.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_4.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_4.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_5.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_5.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_6.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_6.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_7.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 256px/LDR_LLL1_7.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_0.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_0.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_1.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_1.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_10.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_10.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_11.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_11.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_12.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_12.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_13.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_13.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_14.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_14.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_15.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_15.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_16.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_16.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_17.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_17.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_18.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_18.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_19.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_19.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_2.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_2.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_20.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_20.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_21.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_21.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_22.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_22.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_23.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_23.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_24.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_24.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_25.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_25.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_26.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_26.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_27.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_27.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_28.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_28.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_29.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_29.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_3.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_3.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_30.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_30.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_31.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_31.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_32.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_32.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_33.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_33.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_34.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_34.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_35.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_35.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_36.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_36.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_37.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_37.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_38.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_38.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_39.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_39.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_4.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_4.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_40.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_40.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_41.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_41.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_42.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_42.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_43.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_43.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_44.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_44.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_45.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_45.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_46.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_46.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_47.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_47.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_48.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_48.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_49.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_49.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_5.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_5.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_50.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_50.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_51.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_51.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_52.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_52.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_53.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_53.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_54.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_54.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_55.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_55.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_56.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_56.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_57.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_57.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_58.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_58.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_59.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_59.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_6.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_6.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_60.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_60.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_61.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_61.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_62.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_62.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_63.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_63.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_7.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_7.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_8.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_8.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_9.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Blue Noise 64px/LDR_LLL1_9.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Linear to sRGB r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Linear to sRGB r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Linear to Unity Log r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Linear to Unity Log r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/sRGB to Linear r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/sRGB to Linear r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/sRGB to Unity Log r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/sRGB to Unity Log r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Unity Log to Linear r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Unity Log to Linear r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Unity Log to sRGB r1.cube
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Cubes/Unity Log to sRGB r1.cube.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt00.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt00.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt01.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt01.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt02.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt02.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt03.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Lens Dirt/LensDirt03.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/LUTs/NeutralLdrLut.png
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/LUTs/NeutralLdrLut.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/SMAA/AreaTex.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/SMAA/AreaTex.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/SMAA/SearchTex.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/SMAA/SearchTex.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_BlueRed.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_BlueRed.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_GreenPurple.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_GreenPurple.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_PurpleGreen.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_PurpleGreen.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_RedBlue.tga
+Assets/Asset Packs/SDF_BasicTrainingStage/PostProcessing/Textures/Spectral LUTs/SpectralLut_RedBlue.tga.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Prefabs/Environment.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Prefabs/Environment/TrainingStage_Background.prefab
+Assets/Asset Packs/SDF_BasicTrainingStage/Prefabs/Environment/TrainingStage_Background.prefab.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining.unity
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining.unity.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/LightingData.asset
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/LightingData.asset.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/Lightmap-0_comp_light.exr
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/Lightmap-0_comp_light.exr.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/ReflectionProbe-0.exr
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/ReflectionProbe-0.exr.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/ReflectionProbe-1.exr
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/ReflectionProbe-1.exr.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/TrainingStage_PostProfile.asset
+Assets/Asset Packs/SDF_BasicTrainingStage/Scenes/Stage_BasicTraining/TrainingStage_PostProfile.asset.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/HDRI.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/LUT.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants/Training_Stage.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants/Training_Stage/Grid_04.png
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants/Training_Stage/Grid_04.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants/Training_Stage/Grid_Normals.png
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/Enviornmants/Training_Stage/Grid_Normals.png.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/HDRI/HDRI_Training_Stage.hdr
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/HDRI/HDRI_Training_Stage.hdr.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/HDRI/HDRI_Training_Stage_MAT.mat
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/HDRI/HDRI_Training_Stage_MAT.mat.meta
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/LUT/_LUTs_SDF_Training.png
+Assets/Asset Packs/SDF_BasicTrainingStage/Textures/LUT/_LUTs_SDF_Training.png.meta
