@@ -28,9 +28,11 @@ namespace ActionCatGame.Prototype.Enemy
 
             if (IsInChaseRange())
             {
-                
+                _enemyState.SwitchState(new EnemyChasingState(_enemyState));
                 return;
             }
+
+            FacePlayer();
 
             _enemyState.Animator.SetFloat(SPEED_HASH, 0, DAMP_TIME, delta);
         }

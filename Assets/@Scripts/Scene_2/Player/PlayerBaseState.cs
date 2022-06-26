@@ -31,5 +31,17 @@ namespace ActionCatGame.Prototype.State {
 
             _playerState.transform.rotation = Quaternion.LookRotation(lookPos);
         }
+
+        protected void ReturnToLocomotion() 
+        {
+            if (_playerState.Targeter.CurrentTarget != null)
+            {
+                _playerState.SwitchState(new PlayerTargetingState(_playerState));
+            }
+            else
+            {
+                _playerState.SwitchState(new PlayerFreeLookState(_playerState));
+            }
+        }
     }
 }

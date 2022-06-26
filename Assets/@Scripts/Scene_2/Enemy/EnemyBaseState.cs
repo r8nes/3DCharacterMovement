@@ -13,6 +13,16 @@ namespace ActionCatGame.Prototype.State
             _enemyState = enemyState;
         }
 
+        protected void FacePlayer()
+        {
+            if (_enemyState.Player == null) return;
+
+            Vector3 lookPos = _enemyState.Player.transform.position - _enemyState.transform.position;
+            lookPos.y = 0f;
+
+            _enemyState.transform.rotation = Quaternion.LookRotation(lookPos);
+        }
+
         protected bool IsInChaseRange() 
         {
             float playerDistance =(_enemyState.Player.transform.position - _enemyState.transform.position).sqrMagnitude;

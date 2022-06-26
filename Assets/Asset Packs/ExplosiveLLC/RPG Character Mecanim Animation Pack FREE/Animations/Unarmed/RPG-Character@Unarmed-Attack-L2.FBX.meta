@@ -410,15 +410,15 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.36673573
-        functionName: EnableLeftPunch
+      - time: 0.27541152
+        functionName: EnableAttack
         data: 
         objectReferenceParameter: {fileID: 2062065823539931657, guid: 635a7b46e5afbe947a795c6ff5fd47ed, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.6997098
-        functionName: DisableLeftPunch
+      - time: 0.9029061
+        functionName: DisableAttack
         data: 
         objectReferenceParameter: {fileID: 2062065823539931657, guid: 635a7b46e5afbe947a795c6ff5fd47ed, type: 3}
         floatParameter: 0

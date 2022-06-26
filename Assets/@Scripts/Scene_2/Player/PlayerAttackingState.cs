@@ -22,7 +22,7 @@ namespace ActionCatGame.Prototype.Player
 
         public override void Enter()
         {
-            _playerState.Damage.SetAttack(_attack.Damage);
+            _playerState.Damage.SetAttack(_attack.Damage, _attack.KnockBack);
             _playerState.Animator.CrossFadeInFixedTime(_attack.AnimationName, _attack.TransitionDuration);
         }
 
@@ -32,7 +32,7 @@ namespace ActionCatGame.Prototype.Player
 
             FaceTarget();
 
-            float normalizeTime = GetNormalizedTime();
+            float normalizeTime = GetNormalizedTime(_playerState.Animator);
 
             if (normalizeTime >= _prevFrameTime && normalizeTime < 1f)
             {
@@ -89,25 +89,6 @@ namespace ActionCatGame.Prototype.Player
             _playerState.ForceReceiver.AddForce(_playerState.transform.forward * _attack.Force);
 
             _alreadyAppliedForce = true;
-        }
-
-        private float GetNormalizedTime()
-        {
-            AnimatorStateInfo currentInfo = _playerState.Animator.GetCurrentAnimatorStateInfo(0);
-            AnimatorStateInfo nextInfo = _playerState.Animator.GetNextAnimatorStateInfo(0);
-
-            if (_playerState.Animator.IsInTransition(0) && nextInfo.IsTag("Attack"))
-            {
-                return nextInfo.normalizedTime;
-            }
-            else if (!_playerState.Animator.IsInTransition(0) && currentInfo.IsTag("Attack"))
-            {
-                return currentInfo.normalizedTime;
-            }
-            else
-            {
-                return 0f;
-            }
         }
     }
 }

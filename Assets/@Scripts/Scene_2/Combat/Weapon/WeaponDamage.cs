@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using ActionCatGame.Prototype.Props;
 using ActionCatGame.Prototype.Stats;
 using UnityEngine;
 
-namespace ActionCatGame
+namespace ActionCatGame.Prototype.Weapon
 {
-    public class WaeponDamage : MonoBehaviour
+    public class WeaponDamage : MonoBehaviour
     {
         private int _damage;
+        private float _knockback;
 
-        [SerializeField] private Collider _playerCollider;
+        [SerializeField] private Collider _collider;
 
         private List<Collider> _collided = new List<Collider>();
 
@@ -20,7 +22,7 @@ namespace ActionCatGame
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other == _playerCollider) return;
+            if (other == _collider) return;
 
             if (_collided.Contains(other)) return;
 
@@ -30,11 +32,18 @@ namespace ActionCatGame
             {
                 health.DealDamage(_damage);
             }
+
+            if (other.TryGetComponent(out ForceReceiver force))
+            {
+                Vector3 dir = (other.transform.position - _collider.transform.position).normalized; 
+                force.AddForce(dir*_knockback);
+            }
         }
 
-        public void SetAttack(int damage) 
+        public void SetAttack(int damage, float knockback) 
         {
             _damage = damage;
+            _knockback = knockback;
         }
     }
 }

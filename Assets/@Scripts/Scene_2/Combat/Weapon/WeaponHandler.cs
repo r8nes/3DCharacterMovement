@@ -6,28 +6,17 @@ namespace ActionCatGame.Prototype.Weapon
 {
     public class WeaponHandler : MonoBehaviour
     {
-        [SerializeField] private GameObject _lHand;
-        [SerializeField] private GameObject _rHand;
+        [SerializeField] private GameObject _hand;
 
-        public void EnableLeftPunch() 
+        public void EnableAttack() 
         {
-            _lHand.SetActive(true);
+            _hand.SetActive(true);
         }
 
-        public void EnableRightPunch()
+        public void DisableAttack()
         {
-            _rHand.SetActive(true);
-        }
+            _hand.SetActive(false);
 
-        public void DisableLeftPunch()
-        {
-            _lHand.SetActive(false);
-
-        }
-
-        public void DisableRightPunch() 
-        {
-            _rHand.SetActive(false);
         }
     }
 }
