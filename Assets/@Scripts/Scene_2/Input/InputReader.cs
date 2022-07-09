@@ -91,5 +91,10 @@ namespace ActionCatGame
                 IsBlocking = false;
             }
         }
+
+        public void OnWalkToggle(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

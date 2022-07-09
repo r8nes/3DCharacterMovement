@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ActionCatGame.Core.State
 {
-    public class StateMachine : MonoBehaviour
+    public class StateMachine
     {
         protected IState CurrentState;
 
@@ -19,10 +19,12 @@ namespace ActionCatGame.Core.State
         {
             CurrentState?.HandleInput();
         }
+
         public void Update()
         {
             CurrentState?.Update();
         }
+        
         public void PhysicsUpdate()
         {
             CurrentState?.PhysicsUpdate();
