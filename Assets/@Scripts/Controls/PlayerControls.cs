@@ -107,6 +107,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""571b72e8-a2e3-48d1-a72d-324a428e6758"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": ""Clamp(min=-0.1,max=0.1),Invert"",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -384,6 +393,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""WalkToggle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""84619b58-9617-4417-981f-fa6de96ed8dc"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and Keyboard"",
+                    ""action"": ""Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -429,6 +449,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Block = m_Player.FindAction("Block", throwIfNotFound: true);
         m_Player_WalkToggle = m_Player.FindAction("WalkToggle", throwIfNotFound: true);
+        m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -497,6 +518,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Block;
     private readonly InputAction m_Player_WalkToggle;
+    private readonly InputAction m_Player_Zoom;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -510,6 +532,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Block => m_Wrapper.m_Player_Block;
         public InputAction @WalkToggle => m_Wrapper.m_Player_WalkToggle;
+        public InputAction @Zoom => m_Wrapper.m_Player_Zoom;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -546,6 +569,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @WalkToggle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalkToggle;
                 @WalkToggle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalkToggle;
                 @WalkToggle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnWalkToggle;
+                @Zoom.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
+                @Zoom.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
+                @Zoom.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnZoom;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -577,6 +603,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @WalkToggle.started += instance.OnWalkToggle;
                 @WalkToggle.performed += instance.OnWalkToggle;
                 @WalkToggle.canceled += instance.OnWalkToggle;
+                @Zoom.started += instance.OnZoom;
+                @Zoom.performed += instance.OnZoom;
+                @Zoom.canceled += instance.OnZoom;
             }
         }
     }
@@ -610,5 +639,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnBlock(InputAction.CallbackContext context);
         void OnWalkToggle(InputAction.CallbackContext context);
+        void OnZoom(InputAction.CallbackContext context);
     }
 }

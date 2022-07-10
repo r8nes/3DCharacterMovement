@@ -10,7 +10,8 @@ namespace ActionCatGame.Core.Character
     public class Player : MonoBehaviour
     {
         private PlayerMovementStateMachine _movementStateMachine;
-
+        
+        public Transform MainCameraTransform { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public PlayerInput Input { get; private set; }
 
@@ -20,6 +21,8 @@ namespace ActionCatGame.Core.Character
             Input = GetComponent<PlayerInput>();
 
             _movementStateMachine = new PlayerMovementStateMachine(this);
+
+            MainCameraTransform = Camera.main.transform;
         }
 
         private void Start()

@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "571b72e8-a2e3-48d1-a72d-324a428e6758",
+                    "expectedControlType": "Axis",
+                    "processors": "Clamp(min=-0.1,max=0.1),Invert",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -360,6 +369,17 @@
                     "processors": "",
                     "groups": "Mouse and Keyboard",
                     "action": "WalkToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "84619b58-9617-4417-981f-fa6de96ed8dc",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse and Keyboard",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
