@@ -1,26 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using ActionCatGame.Core.State;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ActionCatGame.Core.PlayerState
 {
-    public class PlayerWalkingState : PlayerMovementState
+    public class PlayerWalkingState : PlayerMovingState
     {
         public PlayerWalkingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
         }
 
-        // Start is called before the first frame update
-        void Start()
+        #region IState Methods
+
+        public override void Enter()
         {
-        
+            base.Enter();
+
+            _stateMachine.ReusableData.MovementSpeedMod = _movementData.WalkData.SpeedModif;
         }
 
-        // Update is called once per frame
-        void Update()
+        #endregion
+
+        #region Input Methods
+
+        protected override void OnWalkToggleStatred(InputAction.CallbackContext context)
         {
-        
+            base.OnWalkToggleStatred(context);
+
+            _stateMachine.ChangeState(_stateMachine.RunningState);
         }
+        #endregion
     }
 }

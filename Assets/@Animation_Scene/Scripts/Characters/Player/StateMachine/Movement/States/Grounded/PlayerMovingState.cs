@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ActionCatGame.Core.PlayerState
 {
-    public class PlayerSprintingState : PlayerMovingState
+    public class PlayerMovingState : PlayerGroundedState
     {
-        public PlayerSprintingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
+        public PlayerMovingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
         }
     }

@@ -1,55 +1,53 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ActionCatGame.Core.State
 {
     public class PlayerMovementState : IState
     {
-        protected float _baseSpeed = 5f;
-        protected float _speedModif = 1f;
+        protected PlayerGroundedData _movementData;
 
-        protected Vector3 _currentTargetRotation;
-        protected Vector3 _timeToReachTargetRotation;
-        protected Vector3 _dampedTargetRotationPassedTime;
-        protected Vector3 _dampedTargetRotationCurrentVelocity;
-
-        protected Vector2 _movementInput;
         protected PlayerMovementStateMachine _stateMachine;
         public PlayerMovementState(PlayerMovementStateMachine playerMovementStateMachine)
         {
             _stateMachine = playerMovementStateMachine;
-
+            _movementData = _stateMachine.Player.Data.GroundedData;
             InitData();
         }
 
-        private void InitData()
+        private void InitData() 
         {
-            _timeToReachTargetRotation.y = 0.14f;
+            _stateMachine.ReusableData.TimeToReachTargetRotation = _movementData.BaseRotationData.TargetRotationReachTime;
         }
 
         #region IState Methods
-        public void Enter()
+        public virtual void Enter()
         {
             Debug.Log("State:" + GetType().Name);
+
+            AddInputActionsCallBacks();
         }
 
-        public void Exit()
+        public virtual void Exit()
         {
+            RemoveInoutActionsCallbacks();
         }
 
-        public void HandleInput()
+        public virtual void HandleInput()
         {
             ReadMovementInput();
         }
 
-        public void Update()
+        public virtual void Update()
         {
         }
 
-        public void PhysicsUpdate()
+        public virtual void PhysicsUpdate()
         {
             Move();
         }
@@ -60,7 +58,7 @@ namespace ActionCatGame.Core.State
 
         private void Move()
         {
-            if (_movementInput == Vector2.zero || _speedModif == 0f) return;
+            if (_stateMachine.ReusableData.MovementInput == Vector2.zero || _stateMachine.ReusableData.MovementSpeedMod == 0f) return;
 
             Vector3 movementDir = GetMovementDirection();
 
@@ -86,9 +84,9 @@ namespace ActionCatGame.Core.State
 
         private void UpdateTargetRotationData(float targetAngle)
         {
-            _currentTargetRotation.y = targetAngle;
+            _stateMachine.ReusableData.ÑurrentTargetRotation.y = targetAngle;
 
-            _dampedTargetRotationPassedTime.y = 0f;
+            _stateMachine.ReusableData.DampedTargetRotationPassedTime.y = 0f;
         }
 
         private float AddCameraRotToAngle(float angle)
@@ -112,7 +110,7 @@ namespace ActionCatGame.Core.State
 
         private void ReadMovementInput()
         {
-            _movementInput = _stateMachine.Player.Input.PlayerActions.Move.ReadValue<Vector2>();
+            _stateMachine.ReusableData.MovementInput = _stateMachine.Player.Input.PlayerActions.Move.ReadValue<Vector2>();
         }
 
         #endregion
@@ -128,7 +126,7 @@ namespace ActionCatGame.Core.State
                 directionAngle = AddCameraRotToAngle(directionAngle);
             }
 
-            if (directionAngle != _currentTargetRotation.y)
+            if (directionAngle != _stateMachine.ReusableData.ÑurrentTargetRotation.y)
             {
                 UpdateTargetRotationData(directionAngle);
             }
@@ -136,15 +134,14 @@ namespace ActionCatGame.Core.State
             return directionAngle;
         }
 
-
         protected void RotateTowardsTargetRotation()
         {
             float currentYAngle = _stateMachine.Player.Rigidbody.rotation.eulerAngles.y;
 
-            if (currentYAngle == _currentTargetRotation.y) return;
+            if (currentYAngle == _stateMachine.ReusableData.ÑurrentTargetRotation.y) return;
 
-            float smoothedYAngled = Mathf.SmoothDampAngle(currentYAngle, _currentTargetRotation.y, ref _dampedTargetRotationCurrentVelocity.y, _timeToReachTargetRotation.y - _dampedTargetRotationPassedTime.y);
-            _dampedTargetRotationPassedTime.y += Time.deltaTime;
+            float smoothedYAngled = Mathf.SmoothDampAngle(currentYAngle, _stateMachine.ReusableData.ÑurrentTargetRotation.y, ref _stateMachine.ReusableData.DampedTargetRotationCurrentVelocity.y, _stateMachine.ReusableData.TimeToReachTargetRotation.y - _stateMachine.ReusableData.DampedTargetRotationPassedTime.y);
+            _stateMachine.ReusableData.DampedTargetRotationPassedTime.y += Time.deltaTime;
 
             Quaternion targetRot = Quaternion.Euler(0f, smoothedYAngled, 0f);
 
@@ -166,12 +163,35 @@ namespace ActionCatGame.Core.State
 
         protected Vector3 GetMovementDirection()
         {
-            return new Vector3(_movementInput.x, 0f, _movementInput.y);
+            return new Vector3(_stateMachine.ReusableData.MovementInput.x, 0f, _stateMachine.ReusableData.MovementInput.y);
         }
 
         protected float GetMovementSpeed()
         {
-            return _baseSpeed * _speedModif;
+            return _movementData.BaseSpeed * _stateMachine.ReusableData.MovementSpeedMod;
+        }
+
+        protected void ResetVelocity() 
+        {
+            _stateMachine.Player.Rigidbody.velocity = Vector3.zero;
+        }
+
+        protected virtual void AddInputActionsCallBacks()
+        {
+            _stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStatred;
+        }
+
+        protected virtual void RemoveInoutActionsCallbacks()
+        {
+        }
+        #endregion
+
+        #region Input Methods
+
+        protected virtual void OnWalkToggleStatred(InputAction.CallbackContext context)
+        {
+            _stateMachine.ReusableData.ShouldWalk = !_stateMachine.ReusableData.ShouldWalk;
+
         }
 
         #endregion

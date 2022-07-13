@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
 using UnityEngine;
 
@@ -10,7 +11,9 @@ namespace ActionCatGame.Core.Character
     public class Player : MonoBehaviour
     {
         private PlayerMovementStateMachine _movementStateMachine;
-        
+
+        [field: Header("References")]
+        [field:SerializeField] public PlayerSO Data { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public PlayerInput Input { get; private set; }
