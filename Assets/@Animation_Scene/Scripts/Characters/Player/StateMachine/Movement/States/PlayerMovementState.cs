@@ -161,6 +161,11 @@ namespace ActionCatGame.Core.State
             return Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
         }
 
+        protected Vector3 GetPlayerVerticalVelocity() 
+        {
+            return new Vector3(0f, _stateMachine.Player.Rigidbody.velocity.y, 0f);
+        }
+
         protected Vector3 GetMovementDirection()
         {
             return new Vector3(_stateMachine.ReusableData.MovementInput.x, 0f, _stateMachine.ReusableData.MovementInput.y);
@@ -168,7 +173,7 @@ namespace ActionCatGame.Core.State
 
         protected float GetMovementSpeed()
         {
-            return _movementData.BaseSpeed * _stateMachine.ReusableData.MovementSpeedMod;
+            return _movementData.BaseSpeed * _stateMachine.ReusableData.MovementSpeedMod * _stateMachine.ReusableData.MovementOnSlopesSpeedMod;
         }
 
         protected void ResetVelocity() 

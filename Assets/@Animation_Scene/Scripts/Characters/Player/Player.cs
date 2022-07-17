@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
+using ActionCatGame.Core.Utilities;
 using UnityEngine;
 
 namespace ActionCatGame.Core.Character
@@ -14,6 +15,10 @@ namespace ActionCatGame.Core.Character
 
         [field: Header("References")]
         [field:SerializeField] public PlayerSO Data { get; private set; }
+
+        [field:Header(("Collision"))]
+        [field:SerializeField] public CapsuleColliderUtility ColliderUtility { get; private set; }
+        [field:SerializeField] public PlayerLayerData LayerData { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public PlayerInput Input { get; private set; }
@@ -23,9 +28,18 @@ namespace ActionCatGame.Core.Character
             Rigidbody = GetComponent<Rigidbody>();
             Input = GetComponent<PlayerInput>();
 
-            _movementStateMachine = new PlayerMovementStateMachine(this);
+            ColliderUtility.Init(gameObject);
+            ColliderUtility.CalculateCapsuleColliderDimensions();
 
             MainCameraTransform = Camera.main.transform;
+
+            _movementStateMachine = new PlayerMovementStateMachine(this);
+        }
+
+        private void OnValidate()
+        {
+            ColliderUtility.Init(gameObject);
+            ColliderUtility.CalculateCapsuleColliderDimensions();
         }
 
         private void Start()

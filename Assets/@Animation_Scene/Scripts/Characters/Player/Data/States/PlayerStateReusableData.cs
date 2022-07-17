@@ -8,6 +8,7 @@ namespace ActionCatGame.Core.Data
     {
        public Vector2 MovementInput { get; set; }
         public float MovementSpeedMod { get; set; } = 1f;
+        public float MovementOnSlopesSpeedMod { get; set; } = 1f;
         public bool ShouldWalk { get; set; }
 
         private Vector3 _currentTargetRotation;
