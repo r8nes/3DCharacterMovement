@@ -101,5 +101,15 @@ namespace ActionCatGame
         {
             throw new NotImplementedException();
         }
+
+        public void OnDash(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnSprint(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace ActionCatGame.Core.State
         public PlayerWalkingState WalkingState { get; }
         public PlayerRunningState RunningState { get; }
         public PlayerSprintingState SprintingState { get; }
+        public PlayerDashingState DashingState { get; }
 
         public PlayerMovementStateMachine(Player player) 
         {
@@ -23,6 +24,7 @@ namespace ActionCatGame.Core.State
             WalkingState = new PlayerWalkingState(this);
             RunningState = new PlayerRunningState(this);
             SprintingState = new PlayerSprintingState(this);
+            DashingState = new PlayerDashingState(this);
         }
     }
 }

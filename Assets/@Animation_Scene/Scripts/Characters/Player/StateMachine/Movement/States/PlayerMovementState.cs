@@ -35,7 +35,7 @@ namespace ActionCatGame.Core.State
 
         public virtual void Exit()
         {
-            RemoveInoutActionsCallbacks();
+            RemoveInputActionsCallbacks();
         }
 
         public virtual void HandleInput()
@@ -50,6 +50,19 @@ namespace ActionCatGame.Core.State
         public virtual void PhysicsUpdate()
         {
             Move();
+        }
+
+
+        public virtual void OnAnimationEnterEvent()
+        {
+        }
+
+        public virtual void OnAnimationExitEvent()
+        {
+        }
+
+        public virtual void OnAnimationTransitionEvent()
+        {
         }
 
         #endregion
@@ -186,7 +199,7 @@ namespace ActionCatGame.Core.State
             _stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStatred;
         }
 
-        protected virtual void RemoveInoutActionsCallbacks()
+        protected virtual void RemoveInputActionsCallbacks()
         {
         }
         #endregion

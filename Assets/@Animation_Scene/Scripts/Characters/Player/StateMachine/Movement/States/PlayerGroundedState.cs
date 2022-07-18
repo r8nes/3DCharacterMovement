@@ -72,11 +72,17 @@ namespace ActionCatGame.Core.PlayerState
             base.AddInputActionsCallBacks();
 
             _stateMachine.Player.Input.PlayerActions.Move.canceled += OnMovementCanceled;
+
+            _stateMachine.Player.Input.PlayerActions.Dash.started += OnDashStarted;
         }
 
-        protected override void RemoveInoutActionsCallbacks()
+        protected override void RemoveInputActionsCallbacks()
         {
-            base.RemoveInoutActionsCallbacks();
+            base.RemoveInputActionsCallbacks();
+
+            _stateMachine.Player.Input.PlayerActions.Move.canceled -= OnMovementCanceled;
+
+            _stateMachine.Player.Input.PlayerActions.Dash.started -= OnDashStarted;
         }
 
         protected virtual void OnMove()
@@ -96,6 +102,11 @@ namespace ActionCatGame.Core.PlayerState
         protected virtual void OnMovementCanceled(InputAction.CallbackContext obj)
         {
             _stateMachine.ChangeState(_stateMachine.IdlingState);
+        }
+
+        protected virtual void OnDashStarted(InputAction.CallbackContext obj)
+        {
+            _stateMachine.ChangeState(_stateMachine.DashingState);
         }
 
         #endregion
