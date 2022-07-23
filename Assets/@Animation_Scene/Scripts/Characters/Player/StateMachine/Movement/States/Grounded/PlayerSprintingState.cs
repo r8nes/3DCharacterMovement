@@ -85,6 +85,11 @@ namespace ActionCatGame.Core.PlayerState
 
         #region Input Methods
 
+        protected override void OnMovementCanceled(InputAction.CallbackContext obj)
+        {
+            _stateMachine.ChangeState(_stateMachine.HardStoppingState);
+        }
+
         private void OnSprintPerformed(InputAction.CallbackContext obj)
         {
             _keepSprinting = true;

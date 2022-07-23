@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
 using UnityEngine;
@@ -37,11 +34,9 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void OnAnimationTransitionEvent()
         {
-            base.OnAnimationTransitionEvent();
-
             if (_stateMachine.ReusableData.MovementInput == Vector2.zero)
             {
-                _stateMachine.ChangeState(_stateMachine.IdlingState);
+                _stateMachine.ChangeState(_stateMachine.HardStoppingState);
                 
                 return;
             }
@@ -74,9 +69,7 @@ namespace ActionCatGame.Core.PlayerState
             {
                 _dashedUsed = 0;
 
-                _stateMachine.Player.Input.DisableActionFor(_stateMachine.Player.Input.PlayerActions.Dash, _data.DashLimitCooldown);
-            
-                
+                _stateMachine.Player.Input.DisableActionFor(_stateMachine.Player.Input.PlayerActions.Dash, _data.DashLimitCooldown);      
             }
         }
 

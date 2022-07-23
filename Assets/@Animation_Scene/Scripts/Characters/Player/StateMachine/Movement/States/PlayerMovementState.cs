@@ -148,7 +148,7 @@ namespace ActionCatGame.Core.State
         }
 
         protected void RotateTowardsTargetRotation()
-        {
+        { 
             float currentYAngle = _stateMachine.Player.Rigidbody.rotation.eulerAngles.y;
 
             if (currentYAngle == _stateMachine.ReusableData.ÑurrentTargetRotation.y) return;

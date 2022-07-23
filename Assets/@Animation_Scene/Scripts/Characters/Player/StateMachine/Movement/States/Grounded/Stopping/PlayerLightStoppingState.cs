@@ -10,5 +10,16 @@ namespace ActionCatGame.Core.PlayerState
         public PlayerLightStoppingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
         }
+
+        #region IState Methods
+
+        public override void Enter()
+        {
+            base.Enter();
+
+            _stateMachine.ReusableData.MovementDecelerationForce = _movementData.StopData.LightDecelerationForce;
+        }
+
+        #endregion
     }
 }

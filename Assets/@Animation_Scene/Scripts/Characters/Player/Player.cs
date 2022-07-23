@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
 using ActionCatGame.Core.Utilities;

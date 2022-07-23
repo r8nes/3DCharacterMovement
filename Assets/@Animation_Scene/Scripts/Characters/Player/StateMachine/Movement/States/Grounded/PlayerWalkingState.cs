@@ -26,6 +26,11 @@ namespace ActionCatGame.Core.PlayerState
 
         #region Input Methods
 
+        protected override void OnMovementCanceled(InputAction.CallbackContext obj)
+        {
+            _stateMachine.ChangeState(_stateMachine.LightStoppingState);
+        }
+
         protected override void OnWalkToggleStatred(InputAction.CallbackContext context)
         {
             base.OnWalkToggleStatred(context);
