@@ -13,6 +13,9 @@ namespace ActionCatGame.Core.State
         public PlayerRunningState RunningState { get; }
         public PlayerSprintingState SprintingState { get; }
         public PlayerDashingState DashingState { get; }
+        public PlayerLightStoppingState LightStopState { get; }
+        public PlayerMediumStoppingState MediumStopState { get; }
+        public PlayerHardStoppingState HardStopState { get; }
 
         public PlayerMovementStateMachine(Player player) 
         {
@@ -22,9 +25,14 @@ namespace ActionCatGame.Core.State
             
             IdlingState = new PlayerIdlingState(this);
             WalkingState = new PlayerWalkingState(this);
+
             RunningState = new PlayerRunningState(this);
             SprintingState = new PlayerSprintingState(this);
             DashingState = new PlayerDashingState(this);
+
+            LightStopState = new PlayerLightStoppingState(this);
+            MediumStopState = new PlayerMediumStoppingState(this);
+            HardStopState = new PlayerHardStoppingState(this);
         }
     }
 }

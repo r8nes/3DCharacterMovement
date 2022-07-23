@@ -201,7 +201,25 @@ namespace ActionCatGame.Core.State
 
         protected virtual void RemoveInputActionsCallbacks()
         {
+            _stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStatred;
         }
+
+        protected virtual void DecelerateHorizontally() 
+        {
+            Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+            _stateMachine.Player.Rigidbody.AddForce(-playerHorizontalVelocity * _stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
+        }
+
+        protected bool IsMovingHorizontally(float minMagnitude = 0.1f) 
+        {
+            Vector3 playerHorizontallyVelocity = GetPlayerHorizontalVelocity();
+
+            Vector2 playerHorizontalMovement = new Vector2(playerHorizontallyVelocity.x, playerHorizontallyVelocity.z);
+
+            return playerHorizontalMovement.magnitude > minMagnitude;
+        }
+
         #endregion
 
         #region Input Methods
