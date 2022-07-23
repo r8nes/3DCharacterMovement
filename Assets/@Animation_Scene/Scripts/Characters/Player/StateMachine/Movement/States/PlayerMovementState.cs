@@ -20,10 +20,11 @@ namespace ActionCatGame.Core.State
             InitData();
         }
 
-        private void InitData() 
+        private void InitData()
         {
-            _stateMachine.ReusableData.TimeToReachTargetRotation = _movementData.BaseRotationData.TargetRotationReachTime;
+            SetBaseRotationData();
         }
+
 
         #region IState Methods
         public virtual void Enter()
@@ -129,6 +130,13 @@ namespace ActionCatGame.Core.State
         #endregion
 
         #region Reusable Methods
+
+        protected void SetBaseRotationData()
+        {
+            _stateMachine.ReusableData.RotationData = _movementData.BaseRotationData;
+
+            _stateMachine.ReusableData.TimeToReachTargetRotation = _stateMachine.ReusableData.RotationData.TargetRotationReachTime;
+        }
 
         protected float UpdateTargetRotation(Vector3 direction, bool shouldConsiderCameraRotation = true)
         {

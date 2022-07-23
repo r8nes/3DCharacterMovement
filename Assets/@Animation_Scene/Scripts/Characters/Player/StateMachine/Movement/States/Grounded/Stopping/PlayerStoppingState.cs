@@ -22,6 +22,8 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.PhysicsUpdate();
 
+            RotateTowardsTargetRotation();
+
             if (!IsMovingHorizontally()) return;
 
             DecelerateHorizontally();
