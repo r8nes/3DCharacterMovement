@@ -44,5 +44,10 @@ namespace ActionCatGame.Core.State
         {
             CurrentState?.OnAnimationTransitionEvent();
         }
+
+        public void OnTriggerEnter(Collider collider) 
+        {
+            CurrentState?.OnTriggerEnter(collider);
+        }
     }
 }

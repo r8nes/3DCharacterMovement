@@ -11,12 +11,17 @@ namespace ActionCatGame.Core.State
     public class PlayerMovementState : IState
     {
         protected PlayerGroundedData _movementData;
+        protected PlayerAirborneData _airborneData;
 
         protected PlayerMovementStateMachine _stateMachine;
+
         public PlayerMovementState(PlayerMovementStateMachine playerMovementStateMachine)
         {
             _stateMachine = playerMovementStateMachine;
+
             _movementData = _stateMachine.Player.Data.GroundedData;
+            _airborneData = _stateMachine.Player.Data.AirborneData;
+
             InitData();
         }
 
@@ -66,6 +71,16 @@ namespace ActionCatGame.Core.State
         {
         }
 
+        public virtual void OnTriggerEnter(Collider collider)
+        {
+            if (_stateMachine.Player.LayerData.IsGroundLayer(collider.gameObject.layer))
+            {
+                OnContactWithGround(collider);
+
+                return;
+            }
+        }
+        
         #endregion
 
         #region Main Method
@@ -228,6 +243,10 @@ namespace ActionCatGame.Core.State
             return playerHorizontalMovement.magnitude > minMagnitude;
         }
 
+        protected virtual void OnContactWithGround(Collider collider)
+        {
+        }
+
         #endregion
 
         #region Input Methods
@@ -235,7 +254,6 @@ namespace ActionCatGame.Core.State
         protected virtual void OnWalkToggleStatred(InputAction.CallbackContext context)
         {
             _stateMachine.ReusableData.ShouldWalk = !_stateMachine.ReusableData.ShouldWalk;
-
         }
 
         #endregion

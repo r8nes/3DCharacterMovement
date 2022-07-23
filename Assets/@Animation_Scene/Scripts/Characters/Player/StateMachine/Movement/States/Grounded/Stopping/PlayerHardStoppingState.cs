@@ -15,6 +15,8 @@ namespace ActionCatGame.Core.PlayerState
             base.Enter();
 
             _stateMachine.ReusableData.MovementDecelerationForce = _movementData.StopData.HardDecelerationForce;
+
+            _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
         }
 
         #endregion

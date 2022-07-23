@@ -20,6 +20,8 @@ namespace ActionCatGame.Core.PlayerState
             base.Enter();
 
             _stateMachine.ReusableData.MovementSpeedMod = _movementData.WalkData.SpeedModif;
+
+            _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.WeakForce;
         }
 
         #endregion

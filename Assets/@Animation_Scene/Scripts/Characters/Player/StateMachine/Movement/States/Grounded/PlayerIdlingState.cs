@@ -20,6 +20,8 @@ namespace ActionCatGame.Core.PlayerState
 
             _stateMachine.ReusableData.MovementSpeedMod = 0f;
 
+            _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StationaryForce;
+
             ResetVelocity();
         }
 

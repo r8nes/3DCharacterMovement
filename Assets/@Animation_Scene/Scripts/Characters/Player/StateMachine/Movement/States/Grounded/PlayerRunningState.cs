@@ -24,6 +24,8 @@ namespace ActionCatGame.Core.PlayerState
 
             _stateMachine.ReusableData.MovementSpeedMod = _movementData.RunData.SpeedModif;
 
+            _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.MediumForce;
+
             _startTime = Time.time;
         }
 

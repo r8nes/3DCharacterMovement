@@ -22,6 +22,8 @@ namespace ActionCatGame.Core.Data
         public ref Vector3 TimeToReachTargetRotation { get => ref _timeToReachTargetRotation; }
         public ref Vector3 DampedTargetRotationCurrentVelocity { get => ref _dampedTargetRotationCurrentVelocity; }
         public ref Vector3 DampedTargetRotationPassedTime { get => ref _dampedTargetRotationPassedTime; }
+
+        public Vector3 CurrentJumpForce { get; set; }
         public PlayerRotationData RotationData { get; set; }
     }
 }
