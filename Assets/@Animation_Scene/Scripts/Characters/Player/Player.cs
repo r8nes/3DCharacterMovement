@@ -17,6 +17,9 @@ namespace ActionCatGame.Core.Character
         [field:Header(("Collision"))]
         [field:SerializeField] public PlayerCapsuleColliderUtility ColliderUtility { get; private set; }
         [field:SerializeField] public PlayerLayerData LayerData { get; private set; }
+        
+        [field: Header(("Cameras"))]
+        [field:SerializeField] public PlayerCameraUtility CameraUtility { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
         public PlayerInput Input { get; private set; }
@@ -28,6 +31,7 @@ namespace ActionCatGame.Core.Character
 
             ColliderUtility.Init(gameObject);
             ColliderUtility.CalculateCapsuleColliderDimensions();
+            CameraUtility.Init();
 
             MainCameraTransform = Camera.main.transform;
 

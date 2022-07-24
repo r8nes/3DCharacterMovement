@@ -237,11 +237,17 @@ namespace ActionCatGame.Core.State
         protected virtual void AddInputActionsCallBacks()
         {
             _stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStatred;
+            _stateMachine.Player.Input.PlayerActions.Look.started += OnMouseMovementStarted;
+            _stateMachine.Player.Input.PlayerActions.Move.canceled += OnMovementCanceled;
+            _stateMachine.Player.Input.PlayerActions.Move.performed += OnMovementPerformed;
         }
 
         protected virtual void RemoveInputActionsCallbacks()
         {
             _stateMachine.Player.Input.PlayerActions.WalkToggle.started -= OnWalkToggleStatred;
+            _stateMachine.Player.Input.PlayerActions.Look.started -= OnMouseMovementStarted;
+            _stateMachine.Player.Input.PlayerActions.Move.canceled -= OnMovementCanceled;
+            _stateMachine.Player.Input.PlayerActions.Move.performed -= OnMovementPerformed;
         }
 
         protected virtual void DecelerateHorizontally() 
@@ -251,7 +257,7 @@ namespace ActionCatGame.Core.State
             _stateMachine.Player.Rigidbody.AddForce(-playerHorizontalVelocity * _stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
         }
 
-        protected virtual void DecelerateVertically()
+        protected virtual void DecelerateVertically() 
         {
             Vector3 playerVerticalVelocity = GetPlayerVerticalVelocity();
 
@@ -284,6 +290,68 @@ namespace ActionCatGame.Core.State
         {
         }
 
+        protected void UpdateCameraRecenteringState(Vector2 movementInput) 
+        {
+            if (movementInput == Vector2.zero) return;
+
+            if (movementInput == Vector2.up)
+            {
+                DisableCameraRecentering();
+
+                return;
+            }
+
+            float cameraVerticalAngle = _stateMachine.Player.MainCameraTransform.eulerAngles.x;
+
+            if (cameraVerticalAngle >= 270f)
+            {
+                cameraVerticalAngle -= 360f;
+            }
+
+            cameraVerticalAngle = Mathf.Abs(cameraVerticalAngle);
+
+            if (movementInput == Vector2.down)
+            {
+                SetCameraRecentering(cameraVerticalAngle, _movementData.BackwardsCameraRecentering);
+
+                return;
+            }
+
+            SetCameraRecentering(cameraVerticalAngle, _movementData.SidewaysCameraRecentering);
+        }
+
+        private void SetCameraRecentering(float cameraVerticalAngle, List<PlayerCameraRecenteringData> cameraRecentering)
+        {
+            foreach (PlayerCameraRecenteringData data in cameraRecentering)
+            {
+                if (!data.IsWithinRange(cameraVerticalAngle))
+                    continue;
+
+                EnableCameraRecentering(data.WaitTime, data.RecenteringTime);
+
+                return;
+            }
+
+            DisableCameraRecentering();
+        }
+
+        protected void EnableCameraRecentering(float waitTime = -1, float recenteringTime = -1f) 
+        {
+            float movementSpeed = GetMovementSpeed();
+
+            if (movementSpeed == 0f)
+            {
+                movementSpeed = _movementData.BaseSpeed;
+            }
+
+            _stateMachine.Player.CameraUtility.EnableRecentering(waitTime, recenteringTime, _movementData.BaseSpeed, movementSpeed);
+        }
+
+        protected void DisableCameraRecentering() 
+        {
+            _stateMachine.Player.CameraUtility.DisableRecentering();
+        }
+
         #endregion
 
         #region Input Methods
@@ -291,6 +359,20 @@ namespace ActionCatGame.Core.State
         protected virtual void OnWalkToggleStatred(InputAction.CallbackContext context)
         {
             _stateMachine.ReusableData.ShouldWalk = !_stateMachine.ReusableData.ShouldWalk;
+        }
+
+        private void OnMouseMovementStarted(InputAction.CallbackContext obj)
+        {
+            UpdateCameraRecenteringState(_stateMachine.ReusableData.MovementInput);
+        }
+        private void OnMovementPerformed(InputAction.CallbackContext obj)
+        {
+            UpdateCameraRecenteringState(obj.ReadValue<Vector2>());
+        }
+
+        private void OnMovementCanceled(InputAction.CallbackContext obj)
+        {
+            DisableCameraRecentering();
         }
 
         #endregion
