@@ -80,7 +80,17 @@ namespace ActionCatGame.Core.State
                 return;
             }
         }
-        
+
+        public void OnTriggerExit(Collider collider)
+        {
+            if (_stateMachine.Player.LayerData.IsGroundLayer(collider.gameObject.layer))
+            {
+                OnContactWithGroundExited(collider);
+
+                return;
+            }
+        }
+
         #endregion
 
         #region Main Method
@@ -217,6 +227,13 @@ namespace ActionCatGame.Core.State
             _stateMachine.Player.Rigidbody.velocity = Vector3.zero;
         }
 
+        protected void ResetVerticalVelocity()
+        {
+            Vector3 playerHorizontalVelocity = GetPlayerHorizontalVelocity();
+
+            _stateMachine.Player.Rigidbody.velocity = playerHorizontalVelocity;
+        }
+
         protected virtual void AddInputActionsCallBacks()
         {
             _stateMachine.Player.Input.PlayerActions.WalkToggle.started += OnWalkToggleStatred;
@@ -234,6 +251,13 @@ namespace ActionCatGame.Core.State
             _stateMachine.Player.Rigidbody.AddForce(-playerHorizontalVelocity * _stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
         }
 
+        protected virtual void DecelerateVertically()
+        {
+            Vector3 playerVerticalVelocity = GetPlayerVerticalVelocity();
+
+            _stateMachine.Player.Rigidbody.AddForce(-playerVerticalVelocity * _stateMachine.ReusableData.MovementDecelerationForce, ForceMode.Acceleration);
+        }
+
         protected bool IsMovingHorizontally(float minMagnitude = 0.1f) 
         {
             Vector3 playerHorizontallyVelocity = GetPlayerHorizontalVelocity();
@@ -243,7 +267,20 @@ namespace ActionCatGame.Core.State
             return playerHorizontalMovement.magnitude > minMagnitude;
         }
 
+        protected bool IsMovingUp(float minimumVelocity = 0.1f) 
+        {
+            return GetPlayerVerticalVelocity().y > minimumVelocity;
+        }
+
+        protected bool IsMovingDown(float minimumVelocity = 0.1f)
+        {
+            return GetPlayerVerticalVelocity().y < -minimumVelocity;
+        }
+
         protected virtual void OnContactWithGround(Collider collider)
+        {
+        }
+        protected virtual void OnContactWithGroundExited(Collider collider)
         {
         }
 

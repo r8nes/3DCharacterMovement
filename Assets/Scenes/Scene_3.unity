@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 485106137}
   - component: {fileID: 485106136}
   - component: {fileID: 485106135}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 767599293}
   - component: {fileID: 767599292}
   - component: {fileID: 767599291}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1390,7 +1390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838983133}
   - component: {fileID: 838983134}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1783,7 @@ GameObject:
   - component: {fileID: 1076347858}
   - component: {fileID: 1076347857}
   - component: {fileID: 1076347856}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Small Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3296,7 +3296,7 @@ GameObject:
   - component: {fileID: 1147822823}
   - component: {fileID: 1147822822}
   - component: {fileID: 1147822821}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Obstacle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3609,7 +3609,7 @@ GameObject:
   - component: {fileID: 1351393148}
   - component: {fileID: 1351393147}
   - component: {fileID: 1351393146}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Obstacle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4086,7 +4086,7 @@ GameObject:
   - component: {fileID: 1547106680}
   - component: {fileID: 1547106679}
   - component: {fileID: 1547106678}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Big Ramp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4520,7 +4520,7 @@ GameObject:
   - component: {fileID: 1589228350}
   - component: {fileID: 1589228349}
   - component: {fileID: 1589228348}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5565,10 +5565,12 @@ MonoBehaviour:
       <Height>k__BackingField: 1.8
       <CenterY>k__BackingField: 0.9
       <Radius>k__BackingField: 0.2
+    <TriggerColliderData>k__BackingField:
+      <GroundCheckCollider>k__BackingField: {fileID: 838983134}
   <LayerData>k__BackingField:
     <GroundLayer>k__BackingField:
       serializedVersion: 2
-      m_Bits: 512
+      m_Bits: 64
 --- !u!114 &1988375436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5590,7 +5592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2010604812}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}

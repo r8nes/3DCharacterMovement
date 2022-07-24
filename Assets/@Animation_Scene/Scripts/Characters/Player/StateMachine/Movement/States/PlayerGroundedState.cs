@@ -18,6 +18,13 @@ namespace ActionCatGame.Core.PlayerState
 
         #region IState Methods
 
+        public override void Enter()
+        {
+            base.Enter();
+
+            UpdateShouldSprintState();
+        }
+
         public override void PhysicsUpdate()
         {
             base.PhysicsUpdate();
@@ -63,6 +70,26 @@ namespace ActionCatGame.Core.PlayerState
             return slopeSpeedMofid;
         }
 
+        private void UpdateShouldSprintState()
+        {
+            if (!_stateMachine.ReusableData.ShouldSprint) return;
+
+            if (_stateMachine.ReusableData.MovementInput != Vector2.zero) return;
+
+            _stateMachine.ReusableData.ShouldSprint = false;
+        }
+
+        private bool IsGroundUnderneath()
+        {
+            BoxCollider checkCollider = _stateMachine.Player.ColliderUtility.TriggerColliderData.GroundCheckCollider;
+
+            Vector3 groundColliderCenterInWorldSpace = checkCollider.bounds.center;
+
+            Collider[] overlaps = Physics.OverlapBox(groundColliderCenterInWorldSpace, checkCollider.bounds.extents, checkCollider.transform.rotation, _stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore);
+
+            return overlaps.Length > 0;
+        }
+
         #endregion
 
         #region Reusable Methods
@@ -91,6 +118,12 @@ namespace ActionCatGame.Core.PlayerState
 
         protected virtual void OnMove()
         {
+            if (_stateMachine.ReusableData.ShouldSprint)
+            {
+                _stateMachine.ChangeState(_stateMachine.SprintingState);
+                return;
+            }
+
             if (_stateMachine.ReusableData.ShouldWalk)
             {
                 _stateMachine.ChangeState(_stateMachine.WalkingState);
@@ -99,6 +132,29 @@ namespace ActionCatGame.Core.PlayerState
 
             _stateMachine.ChangeState(_stateMachine.RunningState);
         }
+
+        protected override void OnContactWithGroundExited(Collider collider)
+        {
+            base.OnContactWithGroundExited(collider);
+
+            if (IsGroundUnderneath()) return;
+            
+
+            Vector3 capsuleColliderInWorldSpace = _stateMachine.Player.ColliderUtility.CapsuleColliderData.Collider.bounds.center;
+
+            Ray rayFromCapsuleDown = new Ray(capsuleColliderInWorldSpace - _stateMachine.Player.ColliderUtility.CapsuleColliderData.ColliderVerticalExtens, Vector3.down);
+
+            if (!Physics.Raycast(rayFromCapsuleDown, out _, _movementData.GroundToFallRayDistance, _stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore))
+            {
+                OnFall();
+            }
+        }
+
+        protected virtual void OnFall()
+        {
+            _stateMachine.ChangeState(_stateMachine.FallingState);
+        }
+
         #endregion
 
         #region Input Methods
@@ -106,7 +162,7 @@ namespace ActionCatGame.Core.PlayerState
         protected virtual void OnJumpStarted(InputAction.CallbackContext obj)
         {
             _stateMachine.ChangeState(_stateMachine.JumpingState);
-        } 
+        }
 
         protected virtual void OnMovementCanceled(InputAction.CallbackContext obj)
         {

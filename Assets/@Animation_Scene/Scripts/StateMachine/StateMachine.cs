@@ -49,5 +49,9 @@ namespace ActionCatGame.Core.State
         {
             CurrentState?.OnTriggerEnter(collider);
         }
+        public void OnTriggerExit(Collider collider)
+        {
+            CurrentState?.OnTriggerExit(collider);
+        }
     }
 }

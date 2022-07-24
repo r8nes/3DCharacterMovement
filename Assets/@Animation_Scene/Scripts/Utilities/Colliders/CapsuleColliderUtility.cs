@@ -24,6 +24,7 @@ namespace ActionCatGame.Core.Utilities
         {
             SetCapsuleColliderRadius(DefaultColliderData.Radius);
             SetCapsuleColliderHeight(DefaultColliderData.Height * (1f - SlopeData.StopHeightPercentage));
+
             RecalculateCapsuleColliderCenter();
 
             float halfColliderHeight = CapsuleColliderData.Collider.height / 2f;

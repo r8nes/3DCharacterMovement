@@ -17,6 +17,10 @@ namespace ActionCatGame.Core.State
         public PlayerMediumStoppingState MediumStoppingState { get; }
         public PlayerHardStoppingState HardStoppingState { get; }
         public PlayerJumpingState  JumpingState { get; }
+        public PlayerFallingState  FallingState { get; }
+        public PlayerLightLandingState LightLandingState { get; }
+        public PlayerHardLandingState HardLandingState { get; }
+        public PlayerRollingState RollingState { get; }
 
         public PlayerMovementStateMachine(Player player) 
         {
@@ -36,6 +40,11 @@ namespace ActionCatGame.Core.State
             HardStoppingState = new PlayerHardStoppingState(this);
 
             JumpingState = new PlayerJumpingState(this);
+            FallingState = new PlayerFallingState(this);
+
+            LightLandingState = new PlayerLightLandingState(this);
+            HardLandingState = new PlayerHardLandingState(this);
+            RollingState = new PlayerRollingState(this);
         }
     }
 }

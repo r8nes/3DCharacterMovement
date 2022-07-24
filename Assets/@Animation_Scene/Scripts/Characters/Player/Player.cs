@@ -15,7 +15,7 @@ namespace ActionCatGame.Core.Character
         [field:SerializeField] public PlayerSO Data { get; private set; }
 
         [field:Header(("Collision"))]
-        [field:SerializeField] public CapsuleColliderUtility ColliderUtility { get; private set; }
+        [field:SerializeField] public PlayerCapsuleColliderUtility ColliderUtility { get; private set; }
         [field:SerializeField] public PlayerLayerData LayerData { get; private set; }
         public Transform MainCameraTransform { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
@@ -48,6 +48,11 @@ namespace ActionCatGame.Core.Character
         private void OnTriggerEnter(Collider collider)
         {
             _movementStateMachine.OnTriggerEnter(collider);
+        }
+
+        private void OnTriggerExit(Collider collider)
+        {
+            _movementStateMachine.OnTriggerExit(collider);
         }
 
         private void Update()

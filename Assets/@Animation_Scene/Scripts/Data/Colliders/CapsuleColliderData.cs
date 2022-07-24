@@ -7,7 +7,10 @@ namespace ActionCatGame.Core.Utilities
     public class CapsuleColliderData
     {
         public CapsuleCollider Collider { get; private set; }
+
         public Vector3 ColliderCenterInLocalSpace { get; private set; }
+
+        public Vector3 ColliderVerticalExtens { get; private set; }
 
         public void Init(GameObject gameObject)
         {
@@ -20,6 +23,8 @@ namespace ActionCatGame.Core.Utilities
         public void UpdateColliderData()
         {
             ColliderCenterInLocalSpace = Collider.center;
+
+            ColliderVerticalExtens = new Vector3(0f, Collider.bounds.extents.y, 0f);
         }
     }
 }

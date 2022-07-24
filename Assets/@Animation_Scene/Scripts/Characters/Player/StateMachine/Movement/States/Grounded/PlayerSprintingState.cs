@@ -13,6 +13,7 @@ namespace ActionCatGame.Core.PlayerState
         private float _startTime;
 
         private bool _keepSprinting;
+        private bool _shouldResetSprintState;
 
         private PlayerSprintData _data;
         public PlayerSprintingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
@@ -29,6 +30,8 @@ namespace ActionCatGame.Core.PlayerState
             _stateMachine.ReusableData.MovementSpeedMod = _data.SpeedModif;
 
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
+
+            _shouldResetSprintState = true;
 
             _startTime = Time.time;
         }
@@ -48,7 +51,12 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.Exit();
 
-            _keepSprinting = false;
+            if (_shouldResetSprintState)
+            {
+                _keepSprinting = false;
+
+                _stateMachine.ReusableData.ShouldSprint = false;
+            }
         }
         #endregion
 
@@ -83,6 +91,12 @@ namespace ActionCatGame.Core.PlayerState
             _stateMachine.Player.Input.PlayerActions.Sprint.performed -= OnSprintPerformed;
         }
 
+        protected override void OnFall()
+        {
+            _shouldResetSprintState = false;
+
+            base.OnFall();
+        }
         #endregion
 
         #region Input Methods
@@ -92,9 +106,18 @@ namespace ActionCatGame.Core.PlayerState
             _stateMachine.ChangeState(_stateMachine.HardStoppingState);
         }
 
+        protected override void OnJumpStarted(InputAction.CallbackContext obj)
+        {
+            _shouldResetSprintState = false;
+
+            base.OnJumpStarted(obj);
+        }
+
         private void OnSprintPerformed(InputAction.CallbackContext obj)
         {
             _keepSprinting = true;
+
+            _stateMachine.ReusableData.ShouldSprint = true;
         }
 
         #endregion

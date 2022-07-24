@@ -11,11 +11,27 @@ namespace ActionCatGame.Core.PlayerState
         {
         }
 
+        #region IState Methods
+
+        public override void Enter()
+        {
+            base.Enter();
+
+            ResetSprintState();
+        }
+
+        #endregion
+
         #region Reusable Methods
 
         protected override void OnContactWithGround(Collider collider)
         {
-            _stateMachine.ChangeState(_stateMachine.IdlingState);
+            _stateMachine.ChangeState(_stateMachine.LightLandingState);
+        }
+
+        protected virtual void ResetSprintState() 
+        {
+            _stateMachine.ReusableData.ShouldSprint = false;
         }
 
         #endregion
