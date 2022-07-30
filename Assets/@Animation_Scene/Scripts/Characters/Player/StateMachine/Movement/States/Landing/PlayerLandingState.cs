@@ -11,14 +11,5 @@ namespace ActionCatGame.Core.PlayerState
         public PlayerLandingState(PlayerMovementStateMachine playerMovementStateMachine) : base(playerMovementStateMachine)
         {
         }
-
-        #region Input Methods
-
-        protected override void OnMovementCanceled(InputAction.CallbackContext obj)
-        {
-
-        }
-
-        #endregion
     }
 }

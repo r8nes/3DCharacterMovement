@@ -23,6 +23,8 @@ namespace ActionCatGame.Core.PlayerState
             base.Enter();
 
             UpdateShouldSprintState();
+
+            UpdateCameraRecenteringState(_stateMachine.ReusableData.MovementInput);
         }
 
         public override void PhysicsUpdate()
@@ -65,7 +67,12 @@ namespace ActionCatGame.Core.PlayerState
         {
             float slopeSpeedMofid = _movementData.SlopeSpeedAngle.Evaluate(angle);
 
-            _stateMachine.ReusableData.MovementOnSlopesSpeedMod = slopeSpeedMofid;
+            if (_stateMachine.ReusableData.MovementOnSlopesSpeedMod != slopeSpeedMofid)
+            {
+                _stateMachine.ReusableData.MovementOnSlopesSpeedMod = slopeSpeedMofid;
+
+                UpdateCameraRecenteringState(_stateMachine.ReusableData.MovementInput);
+            }
 
             return slopeSpeedMofid;
         }
@@ -98,8 +105,6 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.AddInputActionsCallBacks();
 
-            _stateMachine.Player.Input.PlayerActions.Move.canceled += OnMovementCanceled;
-
             _stateMachine.Player.Input.PlayerActions.Dash.started += OnDashStarted;
 
             _stateMachine.Player.Input.PlayerActions.Jump.started += OnJumpStarted;
@@ -108,8 +113,6 @@ namespace ActionCatGame.Core.PlayerState
         protected override void RemoveInputActionsCallbacks()
         {
             base.RemoveInputActionsCallbacks();
-
-            _stateMachine.Player.Input.PlayerActions.Move.canceled -= OnMovementCanceled;
 
             _stateMachine.Player.Input.PlayerActions.Dash.started -= OnDashStarted;
 
@@ -162,11 +165,6 @@ namespace ActionCatGame.Core.PlayerState
         protected virtual void OnJumpStarted(InputAction.CallbackContext obj)
         {
             _stateMachine.ChangeState(_stateMachine.JumpingState);
-        }
-
-        protected virtual void OnMovementCanceled(InputAction.CallbackContext obj)
-        {
-            _stateMachine.ChangeState(_stateMachine.IdlingState);
         }
 
         protected virtual void OnDashStarted(InputAction.CallbackContext obj)

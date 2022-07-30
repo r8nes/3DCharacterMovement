@@ -22,6 +22,8 @@ namespace ActionCatGame.Core.State
             _movementData = _stateMachine.Player.Data.GroundedData;
             _airborneData = _stateMachine.Player.Data.AirborneData;
 
+            SetBaseCameraRecenteringData();
+
             InitData();
         }
 
@@ -312,12 +314,12 @@ namespace ActionCatGame.Core.State
 
             if (movementInput == Vector2.down)
             {
-                SetCameraRecentering(cameraVerticalAngle, _movementData.BackwardsCameraRecentering);
+                SetCameraRecentering(cameraVerticalAngle, _stateMachine.ReusableData.BackwardsCameraRecentering);
 
                 return;
             }
 
-            SetCameraRecentering(cameraVerticalAngle, _movementData.SidewaysCameraRecentering);
+            SetCameraRecentering(cameraVerticalAngle, _stateMachine.ReusableData.SideWaysCameraRecentering);
         }
 
         private void SetCameraRecentering(float cameraVerticalAngle, List<PlayerCameraRecenteringData> cameraRecentering)
@@ -352,6 +354,12 @@ namespace ActionCatGame.Core.State
             _stateMachine.Player.CameraUtility.DisableRecentering();
         }
 
+        protected void SetBaseCameraRecenteringData()
+        {
+            _stateMachine.ReusableData.BackwardsCameraRecentering = _movementData.BackwardsCameraRecentering;
+            _stateMachine.ReusableData.SideWaysCameraRecentering = _movementData.SidewaysCameraRecentering;
+        }
+
         #endregion
 
         #region Input Methods
@@ -365,12 +373,13 @@ namespace ActionCatGame.Core.State
         {
             UpdateCameraRecenteringState(_stateMachine.ReusableData.MovementInput);
         }
+
         private void OnMovementPerformed(InputAction.CallbackContext obj)
         {
             UpdateCameraRecenteringState(obj.ReadValue<Vector2>());
         }
 
-        private void OnMovementCanceled(InputAction.CallbackContext obj)
+        protected virtual void OnMovementCanceled(InputAction.CallbackContext obj)
         {
             DisableCameraRecentering();
         }

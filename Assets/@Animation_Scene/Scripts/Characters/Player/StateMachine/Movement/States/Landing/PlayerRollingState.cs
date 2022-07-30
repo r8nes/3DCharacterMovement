@@ -18,9 +18,9 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void Enter()
         {
-            base.Enter();
-
             _stateMachine.ReusableData.MovementSpeedMod = _data.SpeedModid;
+
+            base.Enter();
 
             _stateMachine.ReusableData.ShouldSprint = false;
         }

@@ -17,11 +17,11 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void Enter()
         {
+            _stateMachine.ReusableData.MovementSpeedMod = 0f;
+
             base.Enter();
 
             _stateMachine.Player.Input.PlayerActions.Move.Disable();
-
-            _stateMachine.ReusableData.MovementSpeedMod = 0f;
 
             ResetVelocity();
         }

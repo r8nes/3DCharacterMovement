@@ -25,9 +25,9 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void Enter()
         {
-            base.Enter();
-
             _stateMachine.ReusableData.MovementSpeedMod = _data.SpeedModif;
+
+            base.Enter();
 
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
 
@@ -104,6 +104,8 @@ namespace ActionCatGame.Core.PlayerState
         protected override void OnMovementCanceled(InputAction.CallbackContext obj)
         {
             _stateMachine.ChangeState(_stateMachine.HardStoppingState);
+
+            base.OnMovementCanceled(obj);
         }
 
         protected override void OnJumpStarted(InputAction.CallbackContext obj)

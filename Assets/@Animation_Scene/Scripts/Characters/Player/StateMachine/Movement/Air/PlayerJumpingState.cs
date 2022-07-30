@@ -1,6 +1,7 @@
 using ActionCatGame.Core.Data;
 using ActionCatGame.Core.State;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ActionCatGame.Core.PlayerState
 {
@@ -125,6 +126,14 @@ namespace ActionCatGame.Core.PlayerState
         #region Reusable Methods
 
         protected override void ResetSprintState()
+        {
+        }
+
+        #endregion
+
+        #region Input Methods
+
+        protected override void OnMovementCanceled(InputAction.CallbackContext obj)
         {
         }
 

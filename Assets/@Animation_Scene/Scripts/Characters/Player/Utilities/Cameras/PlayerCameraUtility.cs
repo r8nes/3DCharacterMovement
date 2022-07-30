@@ -36,7 +36,7 @@ namespace ActionCatGame
                 recenteringTime = DefaultHorizontalRecenteringTime;
             }
 
-            recenteringTime *= baseMovementSpeed / movementSpeed;
+            recenteringTime = recenteringTime * baseMovementSpeed / movementSpeed;
 
             _cinemachinePOV.m_HorizontalRecentering.m_WaitTime = waitTime;
             _cinemachinePOV.m_HorizontalRecentering.m_RecenteringTime = recenteringTime ;

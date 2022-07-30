@@ -20,9 +20,9 @@ namespace ActionCatGame.Core.PlayerState
         #region IState Methods
         public override void Enter()
         {
-            base.Enter();
-
             _stateMachine.ReusableData.MovementSpeedMod = _movementData.RunData.SpeedModif;
+
+            base.Enter();
 
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.MediumForce;
 
@@ -62,6 +62,8 @@ namespace ActionCatGame.Core.PlayerState
         protected override void OnMovementCanceled(InputAction.CallbackContext obj)
         {
             _stateMachine.ChangeState(_stateMachine.MediumStoppingState);
+
+            base.OnMovementCanceled(obj);
         }
 
         protected override void OnWalkToggleStatred(InputAction.CallbackContext context)

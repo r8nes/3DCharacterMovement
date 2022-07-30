@@ -13,9 +13,11 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void Enter()
         {
-            base.Enter();
-
             _stateMachine.ReusableData.MovementSpeedMod = 0f;
+
+            SetBaseCameraRecenteringData();
+            
+            base.Enter();
         }
 
         public override void PhysicsUpdate()
@@ -58,15 +60,10 @@ namespace ActionCatGame.Core.PlayerState
 
         #region Input Methods
 
-        protected override void OnMovementCanceled(InputAction.CallbackContext obj)
-        {
-        }
-
         private void OnMovementStatred(InputAction.CallbackContext obj)
         {
             OnMove();
         }
-
 
         #endregion
     }

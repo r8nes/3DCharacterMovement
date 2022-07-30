@@ -13,6 +13,7 @@ namespace ActionCatGame.Core.Data
         [field: SerializeField] public List<PlayerCameraRecenteringData> BackwardsCameraRecentering { get; private set; }
         [field: SerializeField] public AnimationCurve SlopeSpeedAngle { get; private set; } 
         [field: SerializeField] public PlayerRotationData BaseRotationData { get; private set; }
+        [field: SerializeField] public PlayerIdleData IdleData { get; private set; }
         [field: SerializeField] public PlayerWalkData WalkData { get; private set; }
         [field: SerializeField] public PlayerRunData RunData { get; private set; }
         [field: SerializeField] public PlayerDashData DashData { get; private set; }

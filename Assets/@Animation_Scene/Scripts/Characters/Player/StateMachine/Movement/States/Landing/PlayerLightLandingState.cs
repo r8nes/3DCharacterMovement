@@ -16,9 +16,9 @@ namespace ActionCatGame.Core.PlayerState
 
         public override void Enter()
         {
-            base.Enter();
-
             _stateMachine.ReusableData.MovementSpeedMod = 0f;
+
+            base.Enter();
 
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StationaryForce;
 
