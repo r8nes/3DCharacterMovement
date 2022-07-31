@@ -29,11 +29,13 @@ namespace ActionCatGame.Core.PlayerState
             
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.DashParameterHash);
+
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
 
             _stateMachine.ReusableData.RotationData = _data.RotationData;
 
-            AddForceOnStationaryState();
+            Dash();
 
             _shouldKeepRotating = _stateMachine.ReusableData.MovementInput != Vector2.zero;
 
@@ -46,6 +48,8 @@ namespace ActionCatGame.Core.PlayerState
         public override void Exit()
         {
             base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.DashParameterHash);
 
             SetBaseRotationData();
         }
@@ -75,17 +79,22 @@ namespace ActionCatGame.Core.PlayerState
 
         #region Main Methods
 
-        private void AddForceOnStationaryState()
+        private void Dash()
         {
-            if (_stateMachine.ReusableData.MovementInput != Vector2.zero) return;
+            Vector3 dashDirection = _stateMachine.Player.transform.forward;
 
-            Vector3 characterRotationDir = _stateMachine.Player.transform.forward;
+            dashDirection.y = 0f;
 
-            characterRotationDir.y = 0f;
+            UpdateTargetRotation(dashDirection, false);
 
-            UpdateTargetRotation(characterRotationDir, false);
+            if (_stateMachine.ReusableData.MovementInput != Vector2.zero) 
+            {
+                UpdateTargetRotation(GetMovementDirection());
 
-            _stateMachine.Player.Rigidbody.velocity = characterRotationDir * GetMovementSpeed();
+                dashDirection = GetTargetRotationDirection(_stateMachine.ReusableData.ÑurrentTargetRotation.y);
+            }
+
+            _stateMachine.Player.Rigidbody.velocity = dashDirection * GetMovementSpeed(false);
         }
 
         private void UpdateRowDashed()

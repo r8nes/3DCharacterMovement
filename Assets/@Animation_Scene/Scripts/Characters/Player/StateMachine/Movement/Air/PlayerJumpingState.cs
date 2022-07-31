@@ -82,6 +82,8 @@ namespace ActionCatGame.Core.PlayerState
 
             if (_shouldKeepRotating)
             {
+                UpdateTargetRotation(GetMovementDirection());
+
                 jumpDirection = GetTargetRotationDirection(_stateMachine.ReusableData.ÑurrentTargetRotation.y);
             }
 

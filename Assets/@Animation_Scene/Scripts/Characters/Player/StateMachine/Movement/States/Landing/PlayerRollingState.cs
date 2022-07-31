@@ -22,7 +22,16 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.RollParameterHash);
+
             _stateMachine.ReusableData.ShouldSprint = false;
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.RollParameterHash);
         }
 
         public override void PhysicsUpdate()

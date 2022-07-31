@@ -29,6 +29,8 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.SprintParameterHash);
+
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
 
             _shouldResetSprintState = true;
@@ -50,6 +52,8 @@ namespace ActionCatGame.Core.PlayerState
         public override void Exit()
         {
             base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.SprintParameterHash);
 
             if (_shouldResetSprintState)
             {

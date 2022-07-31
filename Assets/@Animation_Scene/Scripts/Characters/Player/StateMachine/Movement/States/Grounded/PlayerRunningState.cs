@@ -24,6 +24,8 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.RunParameterHash);
+
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.MediumForce;
 
             _startTime = Time.time;
@@ -40,6 +42,12 @@ namespace ActionCatGame.Core.PlayerState
             StopRunning();
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.RunParameterHash);
+        }
         #endregion
 
         #region Main Methods

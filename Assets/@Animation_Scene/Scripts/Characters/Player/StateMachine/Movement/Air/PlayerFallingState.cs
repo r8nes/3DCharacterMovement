@@ -24,6 +24,8 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.FallParameterHash);
+
             _playerPositionOnEnter = _stateMachine.Player.transform.position; 
 
             _stateMachine.ReusableData.MovementSpeedMod = 0f;
@@ -38,6 +40,13 @@ namespace ActionCatGame.Core.PlayerState
             LimitVerticalVelocity();
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.FallParameterHash);
+        }
+
         #endregion
 
         #region Reusable Methods
@@ -48,7 +57,7 @@ namespace ActionCatGame.Core.PlayerState
 
         protected override void OnContactWithGround(Collider collider)
         {
-            float fallDistance = Mathf.Abs(_playerPositionOnEnter.y - _stateMachine.Player.transform.position.y);
+            float fallDistance = _playerPositionOnEnter.y - _stateMachine.Player.transform.position.y;
 
             if (fallDistance < _data.MinDistanceFall)
             {

@@ -157,6 +157,15 @@ namespace ActionCatGame.Core.State
         #endregion
 
         #region Reusable Methods
+        protected void StartAnimation(int hash)
+        {
+            _stateMachine.Player.Animator.SetBool(hash, true);
+        }
+
+        protected void StopAnimation(int hash)
+        {
+            _stateMachine.Player.Animator.SetBool(hash, false);
+        }
 
         protected void SetBaseRotationData()
         {
@@ -219,9 +228,16 @@ namespace ActionCatGame.Core.State
             return new Vector3(_stateMachine.ReusableData.MovementInput.x, 0f, _stateMachine.ReusableData.MovementInput.y);
         }
 
-        protected float GetMovementSpeed()
+        protected float GetMovementSpeed(bool shouldConsidersSlopes = true)
         {
-            return _movementData.BaseSpeed * _stateMachine.ReusableData.MovementSpeedMod * _stateMachine.ReusableData.MovementOnSlopesSpeedMod;
+            float movementSpeed = _movementData.BaseSpeed * _stateMachine.ReusableData.MovementSpeedMod * _stateMachine.ReusableData.MovementOnSlopesSpeedMod;
+
+            if (shouldConsidersSlopes)
+            {
+                movementSpeed *= _stateMachine.ReusableData.MovementOnSlopesSpeedMod;
+            }
+
+            return movementSpeed;
         }
 
         protected void ResetVelocity() 
@@ -360,9 +376,9 @@ namespace ActionCatGame.Core.State
             _stateMachine.ReusableData.SideWaysCameraRecentering = _movementData.SidewaysCameraRecentering;
         }
 
-        #endregion
+        #endregion 
 
-        #region Input Methods
+        #region Input Methods 
 
         protected virtual void OnWalkToggleStatred(InputAction.CallbackContext context)
         {

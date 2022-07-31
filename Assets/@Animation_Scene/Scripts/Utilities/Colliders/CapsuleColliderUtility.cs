@@ -18,6 +18,12 @@ namespace ActionCatGame.Core.Utilities
             
             CapsuleColliderData = new CapsuleColliderData();
             CapsuleColliderData.Init(gameObject);
+
+            OnInit();
+        }
+
+        protected virtual void OnInit() 
+        {
         }
 
         public void CalculateCapsuleColliderDimensions() 

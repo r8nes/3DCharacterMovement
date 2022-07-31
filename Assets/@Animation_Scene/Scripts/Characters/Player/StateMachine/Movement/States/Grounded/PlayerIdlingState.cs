@@ -25,9 +25,18 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.IdleParameterHash);
+
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StationaryForce;
 
             ResetVelocity();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.GroundedParameterHash);
         }
 
         public override void Update()
@@ -37,6 +46,15 @@ namespace ActionCatGame.Core.PlayerState
             if (_stateMachine.ReusableData.MovementInput == Vector2.zero) return;
 
             OnMove();
+        }
+
+        public override void PhysicsUpdate()
+        {
+            base.PhysicsUpdate();
+
+            if (!IsMovingHorizontally()) return;
+
+            ResetVelocity();
         }
         #endregion
     }

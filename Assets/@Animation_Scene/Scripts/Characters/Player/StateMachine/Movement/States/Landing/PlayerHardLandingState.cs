@@ -21,7 +21,18 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.HardLandingParameterHash);
+
             _stateMachine.Player.Input.PlayerActions.Move.Disable();
+
+            ResetVelocity();
+        }
+
+        public override void PhysicsUpdate()
+        {
+            base.PhysicsUpdate();
+
+            if (!IsMovingHorizontally()) return;
 
             ResetVelocity();
         }
@@ -29,6 +40,8 @@ namespace ActionCatGame.Core.PlayerState
         public override void Exit()
         {
             base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.HardLandingParameterHash);
 
             _stateMachine.Player.Input.PlayerActions.Move.Enable() ;
         }

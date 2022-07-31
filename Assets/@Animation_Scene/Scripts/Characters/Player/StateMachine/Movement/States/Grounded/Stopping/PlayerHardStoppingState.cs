@@ -14,9 +14,18 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.HardStopParameterHash);
+
             _stateMachine.ReusableData.MovementDecelerationForce = _movementData.StopData.HardDecelerationForce;
 
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.StrongForce;
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.HardStopParameterHash);
         }
 
         #endregion

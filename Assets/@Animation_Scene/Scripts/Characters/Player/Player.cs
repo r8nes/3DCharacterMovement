@@ -21,17 +21,23 @@ namespace ActionCatGame.Core.Character
         [field: Header(("Cameras"))]
         [field:SerializeField] public PlayerCameraUtility CameraUtility { get; private set; }
         public Transform MainCameraTransform { get; private set; }
+
+        [field: Header(("Animations"))]
+        [field:SerializeField] public PlayerAnimationData AnimationData { get; private set; }
         public Rigidbody Rigidbody { get; private set; }
+        public Animator Animator { get; private set; }
         public PlayerInput Input { get; private set; }
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody>();
             Input = GetComponent<PlayerInput>();
+            Animator = GetComponentInChildren<Animator>();
 
             ColliderUtility.Init(gameObject);
             ColliderUtility.CalculateCapsuleColliderDimensions();
             CameraUtility.Init();
+            AnimationData.Init();
 
             MainCameraTransform = Camera.main.transform;
 
@@ -68,6 +74,21 @@ namespace ActionCatGame.Core.Character
         private void FixedUpdate()
         {
             _movementStateMachine.PhysicsUpdate();
+        }
+
+        public void OnMovementStateAnimationEnterEvent() 
+        {
+            _movementStateMachine.OnAnimationEnterEvent();
+        }
+
+        public void OnMovementStateAnimationExitEvent()
+        {
+            _movementStateMachine.OnAnimationEnterEvent();
+        }
+        
+        public void OnMovementStateAnimationTransitionEvent()
+        {
+            _movementStateMachine.OnAnimationEnterEvent();
         }
     }
 }

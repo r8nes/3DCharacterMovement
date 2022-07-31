@@ -18,6 +18,15 @@ namespace ActionCatGame.Core.PlayerState
             SetBaseCameraRecenteringData();
             
             base.Enter();
+
+            StartAnimation(_stateMachine.Player.AnimationData.StoppingParameterHash);
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.StoppingParameterHash);
         }
 
         public override void PhysicsUpdate()

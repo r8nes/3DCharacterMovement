@@ -22,9 +22,18 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.GroundedParameterHash);
+
             UpdateShouldSprintState();
 
             UpdateCameraRecenteringState(_stateMachine.ReusableData.MovementInput);
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.GroundedParameterHash);
         }
 
         public override void PhysicsUpdate()
@@ -92,7 +101,7 @@ namespace ActionCatGame.Core.PlayerState
 
             Vector3 groundColliderCenterInWorldSpace = checkCollider.bounds.center;
 
-            Collider[] overlaps = Physics.OverlapBox(groundColliderCenterInWorldSpace, checkCollider.bounds.extents, checkCollider.transform.rotation, _stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore);
+            Collider[] overlaps = Physics.OverlapBox(groundColliderCenterInWorldSpace, _stateMachine.Player.ColliderUtility.TriggerColliderData.GroundCheckColliderExtens, checkCollider.transform.rotation, _stateMachine.Player.LayerData.GroundLayer, QueryTriggerInteraction.Ignore);
 
             return overlaps.Length > 0;
         }

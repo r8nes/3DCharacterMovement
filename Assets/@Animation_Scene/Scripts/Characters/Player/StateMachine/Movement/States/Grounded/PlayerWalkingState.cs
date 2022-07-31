@@ -27,12 +27,16 @@ namespace ActionCatGame.Core.PlayerState
 
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.WalkParameterHash);
+
             _stateMachine.ReusableData.CurrentJumpForce = _airborneData.JumpData.WeakForce;
         }
 
         public override void Exit()
         {
             base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.WalkParameterHash);
 
             SetBaseCameraRecenteringData();
         }

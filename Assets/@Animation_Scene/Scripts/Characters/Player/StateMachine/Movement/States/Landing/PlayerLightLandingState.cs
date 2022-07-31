@@ -34,6 +34,15 @@ namespace ActionCatGame.Core.PlayerState
             OnMove();
         }
 
+        public override void PhysicsUpdate()
+        {
+            base.PhysicsUpdate();
+
+            if (!IsMovingHorizontally()) return;
+
+            ResetVelocity();
+        }
+
         public override void OnAnimationTransitionEvent()
         { 
             _stateMachine.ChangeState(_stateMachine.IdlingState);

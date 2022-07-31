@@ -17,7 +17,16 @@ namespace ActionCatGame.Core.PlayerState
         {
             base.Enter();
 
+            StartAnimation(_stateMachine.Player.AnimationData.AirborneParameterHash);
+
             ResetSprintState();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+
+            StopAnimation(_stateMachine.Player.AnimationData.AirborneParameterHash);
         }
 
         #endregion
